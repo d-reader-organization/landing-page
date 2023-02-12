@@ -1,0 +1,32 @@
+@use 'variables/theme.module.scss' as *;
+@use 'mixins/common.module.scss' as *;
+@use 'mixins/breakpoints.module.scss' as *;
+
+svg {
+	color: $secondary-color;
+	fill: $secondary-color;
+}
+
+.text--important {
+	color: $important-color;
+}
+
+/* Scroll bar stylings */
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $primary-color-dark;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: $primary-color;
+}
+
+html {
+	scrollbar-color: $primary-color-dark transparent;
+	scrollbar-width: thin;
+}

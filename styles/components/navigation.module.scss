@@ -1,0 +1,107 @@
+@use '../mixins/common.module.scss' as *;
+@use '../mixins/breakpoints.module.scss' as *;
+@use '../mixins/animations.module.scss' as *;
+@use '../variables/theme.module.scss' as *;
+
+.navigation {
+	@include defaultFadeIn;
+
+	padding: 1rem;
+
+	@include sm {
+		padding: 2rem 2rem 3rem 2rem;
+	}
+
+	@include md {
+		padding: 2rem 3rem;
+	}
+
+	@include lg {
+		padding: 3rem 4rem;
+	}
+
+	.company-logo-wrapper {
+		height: 32px;
+	}
+
+	.company-logo {
+		height: 32px;
+		width: auto;
+
+		&:hover {
+			filter: brightness(0.8);
+		}
+	}
+
+	a,
+	button {
+		@include clickable;
+		height: 32px;
+
+		svg {
+			height: 100%;
+			padding: 1px;
+			width: auto;
+		}
+	}
+
+	@include sm {
+		.company-logo-wrapper {
+			height: 36px;
+		}
+
+		.company-logo {
+			height: 36px;
+		}
+
+		a,
+		button {
+			height: 36px;
+		}
+	}
+
+	.navigation-items {
+		margin-left: auto;
+	}
+
+	.navigation-items {
+		> a:not(:last-child),
+		> button:not(:last-child) {
+			margin-right: 0.5rem;
+		}
+	}
+}
+
+.mobile-menu {
+	background: rgba($primary-color, 0.95) !important;
+	margin: 0.4rem;
+
+	li:not(:last-child) {
+		border-bottom: solid 1px rgba($secondary-color, 0.1);
+	}
+
+	ul {
+		padding: 0;
+	}
+
+	li {
+		padding: 0;
+	}
+
+	li > a,
+	li > button {
+		padding: 0.5rem 1rem;
+		width: 100%;
+		justify-content: flex-start;
+
+		&:hover {
+			background-color: unset;
+			filter: brightness(1.5);
+		}
+
+		svg {
+			margin-right: 0.8rem;
+			padding: 2px;
+		}
+	}
+}
