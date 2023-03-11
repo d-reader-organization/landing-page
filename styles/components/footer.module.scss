@@ -1,19 +1,106 @@
 @use '../mixins/common.module.scss' as *;
+@use '../variables/theme.module.scss' as *;
+@use '../mixins/breakpoints.module.scss' as *;
+@use '../mixins/animations.module.scss' as *;
 
 .footer {
-	@include flexRow;
-	justify-content: flex-end;
+	@include flexColumn;
 	margin-top: auto;
+	background-color: $important-color;
+	color: $primary-color;
 
-	.footer-copyright {
-		@include centeredRow;
-		padding: 1rem 2rem 0.4rem 1rem;
-		filter: grayscale(1) brightness(0.4);
+	opacity: 0;
+	&.visible {
+		transition: opacity 4s;
+		opacity: 1;
 	}
 
-	.company-logo {
-		height: 16px;
-		width: auto;
-		margin-right: 0.5rem;
+	.footer-content {
+		margin: 2rem;
+		border-top: 3px solid black;
+
+		@include sm {
+			margin: 2rem 3rem;
+		}
+
+		@include md {
+			margin: 2rem 4rem;
+		}
+	}
+
+	.footer-title {
+		font-weight: bold;
+
+		margin: 2rem 0;
+
+		@include md {
+			margin: 3rem 0;
+		}
+	}
+
+	.footer-navigation {
+		@include flexRow;
+		justify-content: space-between;
+
+		.footer-icons {
+			@include flexRow;
+
+			& > * {
+				margin-right: 0.2rem;
+
+				@include sm {
+					margin-right: 0.5rem;
+				}
+
+				@include md {
+					margin-right: 1rem;
+				}
+			}
+
+			a {
+				@include clickable;
+				min-width: 40px !important;
+				height: 40px !important;
+
+				@include sm {
+					min-width: 48px !important;
+					height: 48px !important;
+				}
+			}
+
+			svg {
+				color: $primary-color;
+				width: 24px;
+				height: 24px;
+
+				@include sm {
+					margin-right: 0.2rem;
+				}
+
+				@include md {
+					margin-right: 0.4rem;
+				}
+			}
+
+			span {
+				display: none;
+
+				@include sm {
+					display: block;
+				}
+			}
+		}
+
+		.copyright {
+			@include centeredRow;
+			white-space: nowrap;
+		}
+
+		.logo {
+			height: 16px;
+			width: auto;
+			margin-right: 0.2rem;
+			margin-bottom: -2px;
+		}
 	}
 }

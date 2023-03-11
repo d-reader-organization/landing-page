@@ -1,0 +1,64 @@
+@use '../mixins/breakpoints.module.scss' as *;
+@use '../variables/theme.module.scss' as *;
+@use '../mixins/common.module.scss' as *;
+
+#creators-section {
+	@include centeredColumn;
+	background-color: $important-color;
+	color: $primary-color;
+	text-align: center;
+	min-height: 100vh;
+	padding: 2rem 0;
+
+	opacity: 0;
+	&.visible {
+		transition: opacity 4s;
+		opacity: 1;
+	}
+
+	.icon--artist {
+		width: 56px;
+		height: auto;
+	}
+
+	.title {
+		font-weight: bold;
+		margin: 1rem 0;
+
+		font-size: 2.75rem !important;
+
+		@include sm {
+			font-size: 3.25rem !important;
+		}
+
+		@include md {
+			font-size: 3.5rem !important;
+		}
+
+		@include lg {
+			font-size: 3.75rem !important;
+		}
+	}
+
+	.text {
+		max-width: 560px;
+		font-size: 16px;
+
+		@include sm {
+			font-size: 18px;
+		}
+
+		@include md {
+			font-size: 20px;
+		}
+	}
+
+	.link {
+		text-decoration: none;
+		border-bottom: 2px solid black;
+		margin: 2rem 0;
+		font-weight: bold;
+		color: $primary-color;
+		font-size: 26px;
+	}
+}

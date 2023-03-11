@@ -2,6 +2,10 @@
 @use 'mixins/common.module.scss' as *;
 @use 'mixins/breakpoints.module.scss' as *;
 
+body {
+	background-color: #15171c;
+}
+
 svg {
 	color: $secondary-color;
 	fill: $secondary-color;
@@ -9,6 +13,11 @@ svg {
 
 .text--important {
 	color: $important-color;
+}
+
+.text--underline {
+	text-decoration: underline;
+	// text-decoration-color: $important-color;
 }
 
 /* Scroll bar stylings */

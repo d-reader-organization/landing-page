@@ -1,54 +1,13 @@
 @use '../mixins/animations.module.scss' as *;
-@use '../mixins/breakpoints.module.scss' as *;
 @use '../mixins/common.module.scss' as *;
 
 .main {
 	@include defaultFadeIn;
-	// min-height: 680px;
-	display: flex;
+	@include flexColumn;
 }
 
 .content {
 	position: relative;
 	overflow: hidden;
-	min-height: 100vh;
 	@include flexColumn;
-
-	&::after {
-		content: '';
-		background-image: url('../../public/assets/background.jpg');
-		background-position: 50%;
-		background-size: cover;
-		background-repeat: no-repeat;
-		transition: 2s width;
-		max-width: 100%;
-		min-height: 100%;
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: -1;
-		clip-path: inset(0 100% 0 0);
-		animation: leftToRight 0.7s ease-out 0.3s forwards;
-		animation-delay: 2s;
-
-		height: 860px;
-
-		@include sm {
-			height: 940px;
-		}
-
-		@include md {
-			height: 1080px;
-		}
-
-		@include lg {
-			height: 1260px;
-		}
-
-		@include xl {
-			height: 1480px;
-		}
-	}
 }

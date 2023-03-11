@@ -1,0 +1,127 @@
+@use '../mixins/animations.module.scss' as *;
+@use '../mixins/common.module.scss' as *;
+@use '../mixins/breakpoints.module.scss' as *;
+@use '../variables/theme.module.scss' as *;
+
+.newsletter-form {
+	display: flex;
+
+	.newsletter-email-input {
+		width: 100%;
+		margin-right: 0.5rem;
+	}
+
+	.button--subscribe {
+		background-color: $secondary-color !important;
+		color: $primary-color !important;
+		height: 40px;
+		margin-left: auto;
+		margin-top: 16px;
+		width: max-content;
+		white-space: nowrap;
+		text-transform: uppercase;
+		border-radius: 6px;
+		padding: 4px 0.4rem !important;
+
+		@include sm {
+			padding: 4px 1rem !important;
+		}
+
+		&:disabled {
+			background-color: $primary-color-light;
+			color: $secondary-color;
+		}
+
+		svg {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	.newsletter-email-input .MuiOutlinedInput-root,
+	.newsletter-email-input .MuiOutlinedInput-notchedOutline,
+	.newsletter-email-input label {
+		padding-right: 0 !important;
+		border-color: white !important;
+		color: white !important;
+	}
+
+	.newsletter-email-input .MuiInputBase-input {
+		background-color: $primary-color-light !important;
+	}
+
+	.newsletter-email-input .MuiOutlinedInput-notchedOutline {
+		border-radius: 6px !important;
+	}
+
+	.newsletter-email-input .Mui-error {
+		color: #d32f2f !important;
+	}
+}
+
+.newsletter-details-dialog {
+	padding: 1rem;
+	background-color: rgb(14, 16, 19, 0.9);
+
+	@include xs {
+		max-width: unset;
+		position: absolute !important;
+		width: 100% !important;
+		bottom: 0 !important;
+		margin: 2rem 0 0 0 !important;
+		border: none !important;
+	}
+
+	@include sm {
+		padding: 1.5rem;
+	}
+
+	.newsletter-checkbox-label {
+		@include flexRow;
+		align-items: center;
+		user-select: none;
+
+		&:hover {
+			cursor: pointer;
+			filter: brightness(0.85);
+		}
+	}
+
+	.newsletter-checkbox-label:not(:last-child) {
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		border-bottom: 2px solid $primary-color-light;
+	}
+}
+
+.button--request-access {
+	background-color: $secondary-color;
+	color: $primary-color;
+	height: 40px;
+	white-space: nowrap;
+	padding: 1rem 2rem !important;
+	text-transform: uppercase;
+	border-radius: 6px;
+
+	&:disabled {
+		background-color: $primary-color-light;
+		color: $secondary-color;
+	}
+
+	&:hover {
+		filter: brightness(0.85) !important;
+		background-color: $secondary-color !important;
+	}
+
+	&:active {
+		background-color: $secondary-color !important;
+	}
+}
+
+.newsletter-loading {
+	padding: 0.6rem;
+
+	svg {
+		color: $primary-color !important;
+	}
+}

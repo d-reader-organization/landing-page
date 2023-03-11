@@ -1,0 +1,76 @@
+@use '../mixins/breakpoints.module.scss' as *;
+@use '../variables/theme.module.scss' as *;
+@use '../mixins/common.module.scss' as *;
+
+#newsletter-section {
+	@include centeredColumn;
+	padding: 6rem 0;
+
+	.newsletter-content {
+		@include flexRow;
+		position: relative;
+		justify-content: space-between;
+		background-color: $primary-color-light;
+		max-width: 980px;
+		margin: 0 auto;
+
+		min-height: 100px;
+		padding: 1rem;
+		width: 100%;
+
+		@media (min-width: 420px) {
+			min-height: 120px;
+			border-radius: 1rem;
+			width: 90%;
+		}
+
+		@include sm {
+			min-height: 140px;
+			padding: 2rem;
+			width: 80%;
+		}
+
+		@include md {
+			min-height: 180px;
+			padding: 2rem;
+		}
+
+		@include lg {
+			min-height: 200px;
+			padding: 3rem;
+		}
+	}
+
+	.form-wrapper {
+		@include flexColumn;
+		justify-content: space-between;
+		width: 68%;
+		max-width: 580px;
+
+		& > .text {
+			font-weight: bold;
+			font-size: 1rem;
+
+			@include sm {
+				font-size: 1.2rem;
+			}
+
+			@include md {
+				font-size: 1.5rem;
+			}
+
+			@include lg {
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	.bun-bun {
+		position: absolute;
+		bottom: 0;
+		right: 5%;
+		width: 25%;
+		height: auto;
+		max-width: 230px;
+	}
+}
