@@ -13,8 +13,8 @@ interface Props extends BoxProps {
 const NewsletterSection: React.FC<Props> = ({ animate = false, observationRef, className, ...props }) => {
 	return (
 		<Box
+			id='newsletter'
 			component='section'
-			id='newsletter-section'
 			className={clsx(className, animate ? 'visible' : '')}
 			ref={observationRef}
 			{...props}
@@ -29,7 +29,9 @@ const NewsletterSection: React.FC<Props> = ({ animate = false, observationRef, c
 							Subscribe as an <span className='text--underline'>early adopter!</span>
 						</Hidden>
 						<Hidden mdDown>
-							Subscribe as an <span className='text--underline'>early adopter</span> & apply for weekly&nbsp;
+							Subscribe as an <span className='text--underline'>early adopter</span> & apply
+							<br />
+							for&nbsp;
 							<span className='text--important'>free Comic NFT</span> drops!
 						</Hidden>
 					</Typography>

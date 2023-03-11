@@ -96,7 +96,7 @@ const NewsletterForm: React.FC = () => {
 							<span>
 								I want to receive latest news about the <TextImportant>project development</TextImportant>
 								<br />
-								<em>milestones, roadmap updates, grant applications...</em>
+								<em>milestones, roadmap updates, grants...</em>
 							</span>
 						</label>
 						<label className='newsletter-checkbox-label'>
@@ -131,7 +131,7 @@ const NewsletterForm: React.FC = () => {
 							disabled={!auth.isAuthenticated}
 							form='newsletter-form'
 						>
-							{isLoading ? <CircularProgress className='newsletter-loading' /> : 'Request Access'}
+							{isLoading ? <CircularProgress className='newsletter-loading' /> : 'Confirm'}
 						</Button>
 					</Dialog>
 				</Form>

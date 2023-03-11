@@ -6,14 +6,14 @@ import clsx from 'clsx'
 
 interface Props extends BoxProps {
 	animate: boolean
-	observationRef?: BoxProps['ref']
+	observationRef: BoxProps['ref']
 }
 
 const CreatorSection: React.FC<Props> = ({ animate = false, observationRef, className, ...props }) => {
 	return (
 		<Box
+			id='creators'
 			component='section'
-			id='creators-section'
 			className={clsx(className, animate ? 'visible' : '')}
 			ref={observationRef}
 			{...props}
@@ -26,8 +26,8 @@ const CreatorSection: React.FC<Props> = ({ animate = false, observationRef, clas
 				<Hidden smDown>Come reach out to us.</Hidden>
 			</Typography>
 			<Typography className='text'>
-				All-in-one app removing obstacles from digital collectibles for indie creators, publishers, brands, and
-				projects.
+				Unlock the full potential of your creativity and connect with a new kind of audience on dReader. Reach out to us
+				and publish your story on chain!
 			</Typography>
 			<Link href='mailto:admin@dreader.io' rel='noreferrer' target='_blank' className='link'>
 				Schedule a call 🤙

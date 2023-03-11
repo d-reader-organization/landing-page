@@ -57,23 +57,3 @@ declare global {
 		solana?: { publicKey: PublicKey }
 	}
 }
-
-interface ReactFlashlightProps {
-	enabled?: bool
-	children: node
-	showCursor?: bool
-	size?: number
-	initialPosition?: {
-		x: number
-		y: number
-	}
-	moveTo?: object
-	speed?: number
-	contain?: bool
-	enableMouse?: bool
-	darkness?: number
-}
-
-declare module 'react-flashlight' {
-	const ReactFlashlight: React.FC<ReactFlashlightProps>
-}

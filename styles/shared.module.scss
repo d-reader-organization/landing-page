@@ -2,6 +2,15 @@
 @use 'mixins/common.module.scss' as *;
 @use 'mixins/breakpoints.module.scss' as *;
 
+html {
+	scroll-behavior: smooth;
+}
+
+::selection {
+	color: black;
+	background: $important-color;
+}
+
 body {
 	background-color: #15171c;
 }

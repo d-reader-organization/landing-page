@@ -23,19 +23,19 @@ const Footer: React.FC<Props> = ({ animate = false, ...props }) => {
 					<Box className='footer-icons'>
 						<Button href='https://twitter.com/dReaderApp' rel='noreferrer' target='_blank'>
 							<TwitterIcon />
-							<Typography>Twitter</Typography>
+							<Typography component='span'>Twitter</Typography>
 						</Button>
 						<Button href='https://discord.gg/BfCqPu63ZX' rel='noreferrer' target='_blank'>
 							<DiscordIcon />
-							<Typography>Discord</Typography>
+							<Typography component='span'>Discord</Typography>
 						</Button>
 						<Button href='https://docs.dreader.io' rel='noreferrer' target='_blank'>
 							<GitbookIcon />
-							<Typography>Gitbook</Typography>
+							<Typography component='span'>Gitbook</Typography>
 						</Button>
 						<Button href='https://github.com/d-reader-organization' rel='noreferrer' target='_blank'>
 							<GithubIcon />
-							<Typography>Github</Typography>
+							<Typography component='span'>Github</Typography>
 						</Button>
 					</Box>
 					<Box className='copyright'>

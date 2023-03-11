@@ -2,16 +2,30 @@
 @use '../variables/theme.module.scss' as *;
 @use '../mixins/common.module.scss' as *;
 
-#newsletter-section {
+#newsletter {
 	@include centeredColumn;
 	padding: 6rem 0;
+
+	@include md {
+		padding: 8rem 0;
+	}
+
+	@include lg {
+		padding: 10rem 0;
+	}
+
+	opacity: 0;
+	&.visible {
+		transition: opacity 4s;
+		opacity: 1;
+	}
 
 	.newsletter-content {
 		@include flexRow;
 		position: relative;
 		justify-content: space-between;
 		background-color: $primary-color-light;
-		max-width: 980px;
+		max-width: 920px;
 		margin: 0 auto;
 
 		min-height: 100px;
@@ -66,6 +80,7 @@
 	}
 
 	.bun-bun {
+		@include unclickable;
 		position: absolute;
 		bottom: 0;
 		right: 5%;

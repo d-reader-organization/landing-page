@@ -1,35 +1,98 @@
 @use '../mixins/breakpoints.module.scss' as *;
+@use '../mixins/common.module.scss' as *;
 
 .section {
 	position: relative;
 	padding: 2rem 1rem;
 
 	@include sm {
-		padding: 3rem 1.5rem;
+		padding: 4rem 1.5rem;
 	}
 
 	@include md {
-		padding: 4rem 2rem;
+		padding: 6rem 2rem;
 	}
 
-	// &::before {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	content: '';
-	// 	background: url('../../public/assets/ui/divider.png');
-	// 	height: 4px;
-	// 	width: 100%;
-	// 	display: block;
-	// }
+	.section-image {
+		@include unclickable;
+		width: 100% !important;
+		height: auto !important;
 
-	.section-title {
+		max-width: 300px;
+
+		@include md {
+			max-width: 360px;
+		}
+
+		@include md {
+			max-width: 420px;
+		}
+	}
+
+	.section-content-wrapper {
+		@include centeredColumn;
+	}
+
+	.section-content {
+		@include flexColumn;
+		align-items: center;
 		text-align: center;
-		padding-bottom: 1rem;
+		margin: 0 auto;
+
+		max-width: 300px;
 
 		@include md {
 			text-align: left;
-			padding-bottom: 2rem;
+			max-width: 360px;
+		}
+
+		& > svg {
+			height: auto;
+			width: 32px;
+
+			@include sm {
+				width: 40px;
+			}
+
+			@include md {
+				width: 48px;
+			}
+
+			@include lg {
+				width: 52px;
+			}
+		}
+	}
+
+	.section-title {
+		margin: 2rem 0;
+		font-weight: bold;
+		font-size: 1.5rem;
+		max-width: 260px;
+
+		@include sm {
+			font-size: 2rem;
+			max-width: unset;
+		}
+
+		@include md {
+			font-size: 2.5rem;
+		}
+
+		@include lg {
+			font-size: 3rem;
+		}
+	}
+
+	.section-text {
+		font-size: 1rem;
+
+		@include sm {
+			font-size: 1.125rem;
+		}
+
+		@include md {
+			font-size: 1.25rem;
 		}
 	}
 }

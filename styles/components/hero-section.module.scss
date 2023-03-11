@@ -1,0 +1,223 @@
+@use '../mixins/breakpoints.module.scss' as *;
+@use '../variables/theme.module.scss' as *;
+@use '../mixins/common.module.scss' as *;
+
+#hero {
+	@include centeredColumn;
+	text-align: center;
+	overflow: hidden;
+	padding: 2rem 0;
+
+	.title {
+		font-weight: bold;
+
+		margin: 1rem 0;
+		font-size: 2rem;
+
+		@include sm {
+			margin: 1.5rem 0;
+			font-size: 3rem;
+		}
+
+		@include md {
+			margin: 2rem 0;
+			font-size: 3.5rem;
+		}
+
+		@include lg {
+			margin: 2.5rem 0;
+			font-size: 4rem;
+		}
+	}
+
+	.text {
+		font-size: 16px;
+		max-width: 80%;
+
+		@include sm {
+			max-width: 480px;
+			font-size: 18px;
+		}
+
+		@include md {
+			max-width: 560px;
+			font-size: 20px;
+		}
+	}
+
+	.link {
+		text-decoration: none;
+		border-bottom: 2px solid black;
+		margin: 2rem 0;
+		font-weight: bold;
+		color: $primary-color;
+		font-size: 26px;
+	}
+
+	.hero-image-wrapper {
+		position: relative;
+		width: 100%;
+
+		margin: 2rem 0;
+
+		@include sm {
+			margin: 0;
+		}
+
+		@include md {
+			margin: 6rem 0 2rem 0;
+		}
+
+		@include lg {
+			margin: 8rem 0 2rem 0;
+		}
+
+		.hero-gradient {
+			background-color: #2f333e;
+			filter: blur(120px);
+			position: absolute;
+			border-radius: 90%;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+			z-index: -5;
+
+			opacity: 0;
+			&.visible {
+				transition: opacity 2s;
+				opacity: 0.7;
+			}
+
+			@include portrait {
+				width: 60vh;
+				height: 60vh;
+			}
+
+			@include landscape {
+				width: 40vw;
+				height: 40vw;
+			}
+		}
+
+		.hero-image {
+			position: absolute;
+			max-height: 100%;
+			width: auto;
+		}
+
+		@include portrait {
+			height: 100vw;
+
+			.hero-image {
+				&--1 {
+					display: none;
+
+					@include sm {
+						left: 2%;
+						bottom: 50%;
+						z-index: -5;
+						width: 12%;
+						height: auto;
+						display: block;
+					}
+				}
+
+				&--2 {
+					left: -9%;
+					bottom: 14%;
+					z-index: -2;
+					width: 28%;
+					height: auto;
+				}
+
+				&--3 {
+					left: 25%;
+					bottom: 0%;
+					z-index: -4;
+					width: 50%;
+					height: auto;
+				}
+
+				&--4 {
+					left: 58%;
+					bottom: 42%;
+					z-index: -1;
+					width: 30%;
+					height: auto;
+				}
+
+				&--5 {
+					right: -8%;
+					bottom: 2%;
+					z-index: -3;
+					width: 24%;
+					height: auto;
+				}
+			}
+		}
+
+		@include landscape {
+			height: 90vh;
+
+			@include lg {
+				height: 100vh;
+			}
+
+			.hero-image {
+				&--1 {
+					left: 2%;
+					z-index: -5;
+					width: 8%;
+					height: auto;
+
+					bottom: 40%;
+
+					@include sm {
+						bottom: 40%;
+					}
+
+					@include md {
+						bottom: 50%;
+					}
+
+					@include lg {
+						bottom: 70%;
+					}
+				}
+
+				&--2 {
+					left: 2%;
+					bottom: 8%;
+					z-index: -2;
+					width: 24%;
+					height: auto;
+				}
+
+				&--3 {
+					left: 38%;
+					bottom: 0%;
+					z-index: -4;
+					width: 26%;
+					height: auto;
+					min-width: 280px;
+				}
+
+				&--4 {
+					left: 52%;
+					bottom: 30%;
+					z-index: -1;
+					width: 25%;
+					height: auto;
+				}
+
+				&--5 {
+					right: 0%;
+					bottom: 0%;
+					z-index: -3;
+					width: 20%;
+					height: auto;
+				}
+			}
+		}
+	}
+}
