@@ -103,6 +103,22 @@
 			position: absolute;
 			max-height: 100%;
 			width: auto;
+
+			&--1 {
+				animation: float 8s ease-in-out infinite;
+			}
+
+			&--2 {
+				animation: float 4s ease-in-out infinite;
+			}
+
+			&--4 {
+				animation: float 6s ease-in-out infinite;
+			}
+
+			&--5 {
+				animation: float 8s ease-in-out infinite;
+			}
 		}
 
 		@include portrait {
@@ -235,6 +251,8 @@
 		width: 100%;
 		height: auto;
 		max-width: 260px;
-		margin-top: 1rem;
+		margin-top: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 8px 8px 8px black;
 	}
 }
