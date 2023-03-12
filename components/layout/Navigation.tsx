@@ -13,12 +13,12 @@ const Navigation: React.FC<ToolbarProps> = (props) => {
 
 	return (
 		<Toolbar component='nav' className='navigation' {...props}>
-			<a href='https://www.dreader.io' rel='noreferrer' target='_blank' className='logo-wrapper'>
+			<a aria-label='homepage' href='https://www.dreader.io' rel='noreferrer' target='_blank' className='logo-wrapper'>
 				<LogoIcon className='logo' />
 			</a>
 
 			<Box className='navigation-items'>
-				<WalletButtonDynamic http={http} className='wallet-button'>
+				<WalletButtonDynamic http={http} className='wallet-button' aria-label='connect wallet'>
 					<WalletIcon />
 					<span className='text'>{connected ? 'Connected 🫡' : 'Connect Wallet'}</span>
 				</WalletButtonDynamic>

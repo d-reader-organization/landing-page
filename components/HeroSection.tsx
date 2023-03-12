@@ -71,7 +71,6 @@ const HeroSection: React.FC<Props> = ({ animate = false, observationRef, ...prop
 				</Slide>
 				<Slide in={animate} direction='up' timeout={{ enter: 2500 }} onEntered={toggleFloat2}>
 					<Image
-						priority
 						src={HeroImage2}
 						alt=''
 						height={361}
@@ -101,7 +100,6 @@ const HeroSection: React.FC<Props> = ({ animate = false, observationRef, ...prop
 				</Slide>
 				<Slide in={animate} direction='up' timeout={{ enter: 2500 }} onEntered={toggleFloat5}>
 					<Image
-						priority
 						src={HeroImage5}
 						alt=''
 						height={390}

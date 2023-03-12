@@ -16,7 +16,7 @@ class MyDocument extends Document {
 
 					<meta
 						name='description'
-						content='Affordable, Authentic & Limited Edition. From manga to comics, now you can own digital graphic novels from your favorite artists and get rewarded for collecting.'
+						content='Affordable, Authentic & Limited Edition. From manga to comics, you can now own digital graphic novels from your favorite artists and get rewarded for collecting.'
 					/>
 					<meta name='keywords' content='NFT, dReader, Comic, Solana, SOL, mint, collection, manga, manwha' />
 

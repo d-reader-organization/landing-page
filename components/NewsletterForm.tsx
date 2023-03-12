@@ -74,7 +74,7 @@ const NewsletterForm: React.FC = () => {
 							<Hidden smUp>Sub</Hidden>
 						</Button>
 					) : (
-						<WalletButtonDynamic http={http} className='wallet-button button--subscribe'>
+						<WalletButtonDynamic http={http} className='wallet-button button--subscribe' aria-label='connect wallet'>
 							<WalletIcon />
 							<span className='text'>{connected ? 'Connected 🫡' : 'Connect'}</span>
 						</WalletButtonDynamic>

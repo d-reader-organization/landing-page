@@ -130,7 +130,7 @@
 
 					@include sm {
 						left: 2%;
-						bottom: 50%;
+						bottom: 54%;
 						z-index: -5;
 						width: 12%;
 						height: auto;
@@ -192,14 +192,14 @@
 					height: auto;
 					max-width: 133px;
 
-					bottom: 40%;
+					bottom: 44%;
 
 					@include sm {
-						bottom: 40%;
+						bottom: 48%;
 					}
 
 					@include md {
-						bottom: 50%;
+						bottom: 56%;
 					}
 
 					@include lg {

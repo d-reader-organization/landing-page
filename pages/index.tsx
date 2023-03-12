@@ -43,7 +43,6 @@ const Home: NextPage = () => {
 						<Image
 							src='/assets/vector-icons/chat-background-icon.svg'
 							alt=''
-							sizes='80vw'
 							width={1125}
 							height={1270}
 							className='background background--circle'
@@ -62,7 +61,6 @@ const Home: NextPage = () => {
 						<Image
 							src={FundraisingModalImage}
 							alt=''
-							sizes='50vw'
 							width={407}
 							height={331}
 							className='background background--fundraising'
