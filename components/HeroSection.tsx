@@ -8,13 +8,20 @@ import HeroImage5 from 'public/assets/hero-5.png'
 import ComingSoonImage from 'public/assets/coming-soon.png'
 import Image from 'next/image'
 import clsx from 'clsx'
+import { useToggle } from 'hooks'
 
 interface Props extends BoxProps {
 	animate: boolean
 	observationRef: BoxProps['ref']
 }
 
+// God forgive me for this ugly component
 const HeroSection: React.FC<Props> = ({ animate = false, observationRef, ...props }) => {
+	const [floatImage1, toggleFloat1] = useToggle()
+	const [floatImage2, toggleFloat2] = useToggle()
+	const [floatImage4, toggleFloat4] = useToggle()
+	const [floatImage5, toggleFloat5] = useToggle()
+
 	return (
 		<Box id='hero' component='section' {...props}>
 			<Typography component='h1' variant='h2' className='title'>
@@ -52,20 +59,55 @@ const HeroSection: React.FC<Props> = ({ animate = false, observationRef, ...prop
 				/>
 
 				<div className={clsx('hero-gradient', animate ? 'visible' : '')} />
-				<Slide in={animate} direction='up' timeout={{ enter: 1800 }}>
-					<Image priority src={HeroImage1} alt='' height={124} width={133} className='hero-image hero-image--1' />
+				<Slide in={animate} direction='up' timeout={{ enter: 1800 }} onEntered={toggleFloat1}>
+					<Image
+						priority
+						src={HeroImage1}
+						alt=''
+						height={124}
+						width={133}
+						className={clsx('hero-image', 'hero-image--1', floatImage1 ? 'hero-image--1_animate' : '')}
+					/>
 				</Slide>
-				<Slide in={animate} direction='up' timeout={{ enter: 2500 }}>
-					<Image priority src={HeroImage2} alt='' height={361} width={381} className='hero-image hero-image--2' />
+				<Slide in={animate} direction='up' timeout={{ enter: 2500 }} onEntered={toggleFloat2}>
+					<Image
+						priority
+						src={HeroImage2}
+						alt=''
+						height={361}
+						width={381}
+						className={clsx('hero-image', 'hero-image--2', floatImage2 ? 'hero-image--2_animate' : '')}
+					/>
 				</Slide>
 				<Slide in={animate} direction='up' timeout={{ enter: 1700 }}>
-					<Image priority src={HeroImage3} alt='' height={889} width={482} className='hero-image hero-image--3' />
+					<Image
+						priority
+						src={HeroImage3}
+						alt=''
+						height={889}
+						width={482}
+						className={clsx('hero-image', 'hero-image--3')}
+					/>
 				</Slide>
-				<Slide in={animate} direction='up' timeout={{ enter: 2100 }}>
-					<Image priority src={HeroImage4} alt='' height={290} width={398} className='hero-image hero-image--4' />
+				<Slide in={animate} direction='up' timeout={{ enter: 2100 }} onEntered={toggleFloat4}>
+					<Image
+						priority
+						src={HeroImage4}
+						alt=''
+						height={290}
+						width={398}
+						className={clsx('hero-image', 'hero-image--4', floatImage4 ? 'hero-image--4_animate' : '')}
+					/>
 				</Slide>
-				<Slide in={animate} direction='up' timeout={{ enter: 2500 }}>
-					<Image priority src={HeroImage5} alt='' height={390} width={311} className='hero-image hero-image--5' />
+				<Slide in={animate} direction='up' timeout={{ enter: 2500 }} onEntered={toggleFloat5}>
+					<Image
+						priority
+						src={HeroImage5}
+						alt=''
+						height={390}
+						width={311}
+						className={clsx('hero-image', 'hero-image--5', floatImage5 ? 'hero-image--5_animate' : '')}
+					/>
 				</Slide>
 			</Box>
 			<Hidden mdUp>

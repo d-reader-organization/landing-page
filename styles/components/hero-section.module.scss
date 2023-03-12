@@ -104,19 +104,19 @@
 			max-height: 100%;
 			width: auto;
 
-			&--1 {
+			&--1_animate {
 				animation: float 8s ease-in-out infinite;
 			}
 
-			&--2 {
+			&--2_animate {
 				animation: float 4s ease-in-out infinite;
 			}
 
-			&--4 {
+			&--4_animate {
 				animation: float 6s ease-in-out infinite;
 			}
 
-			&--5 {
+			&--5_animate {
 				animation: float 8s ease-in-out infinite;
 			}
 		}
