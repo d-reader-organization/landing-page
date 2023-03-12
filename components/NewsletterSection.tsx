@@ -37,7 +37,7 @@ const NewsletterSection: React.FC<Props> = ({ animate = false, observationRef, c
 					</Typography>
 					<NewsletterForm />
 				</Box>
-				<Image src={bunBunImage} alt='' width={250} height={450} className='bun-bun' />
+				<Image loading='lazy' src={bunBunImage} alt='' width={250} height={450} className='bun-bun' />
 			</Box>
 		</Box>
 	)

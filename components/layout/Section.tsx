@@ -40,7 +40,13 @@ const Section: React.FC<Props> = ({
 					<Fade in={animate} timeout={2000}>
 						<div>
 							<div className='section-image-wrapper'>
-								<Image src={src} alt='' sizes='(max-width: 900px) 100vw,60vw' className='section-image' />
+								<Image
+									loading='lazy'
+									src={src}
+									alt=''
+									sizes='(max-width: 900px) 100vw,60vw'
+									className='section-image'
+								/>
 								{backgroundImage}
 							</div>
 							<Hidden mdUp>

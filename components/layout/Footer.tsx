@@ -39,7 +39,7 @@ const Footer: React.FC<Props> = ({ animate = false, ...props }) => {
 						</Button>
 					</Box>
 					<Box className='copyright'>
-						<Image className='logo' src={logoImage} width={96} height={96} alt='dReader' />
+						<Image loading='lazy' className='logo' src={logoImage} width={96} height={96} alt='dReader' />
 						<Typography variant='body2'>{`© dReader / ${new Date().getFullYear()}`}</Typography>
 					</Box>
 				</Box>
