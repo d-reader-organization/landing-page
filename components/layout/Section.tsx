@@ -10,6 +10,7 @@ interface Props extends ContainerProps {
 	reverse?: boolean
 	animate: boolean
 	src: ImageProps['src']
+	backgroundImage?: React.ReactNode
 	observationRef: ContainerProps['ref']
 }
 
@@ -22,6 +23,7 @@ const Section: React.FC<Props> = ({
 	animate = false,
 	observationRef,
 	src,
+	backgroundImage,
 	...props
 }) => {
 	const containerRef = useRef(null)
@@ -37,7 +39,10 @@ const Section: React.FC<Props> = ({
 				<Grid item xs={12} md={6} position='relative' textAlign={{ xs: 'center', md: reverse ? 'left' : 'right' }}>
 					<Fade in={animate} timeout={2000}>
 						<div>
-							<Image src={src} alt='' sizes='(max-width: 900px) 100vw,60vh' className='section-image' />
+							<div className='section-image-wrapper'>
+								<Image src={src} alt='' sizes='(max-width: 900px) 100vw,60vw' className='section-image' />
+								{backgroundImage}
+							</div>
 							<Hidden mdUp>
 								<Box className='section-content'>
 									<Typography mt={2} className='section-text'>

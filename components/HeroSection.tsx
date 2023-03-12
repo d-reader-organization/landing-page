@@ -5,6 +5,7 @@ import HeroImage2 from 'public/assets/hero-2.png'
 import HeroImage3 from 'public/assets/hero-3.png'
 import HeroImage4 from 'public/assets/hero-4.png'
 import HeroImage5 from 'public/assets/hero-5.png'
+import ComingSoonImage from 'public/assets/coming-soon.png'
 import Image from 'next/image'
 import clsx from 'clsx'
 
@@ -19,7 +20,7 @@ const HeroSection: React.FC<Props> = ({ animate = false, observationRef, ...prop
 			<Typography component='h1' variant='h2' className='title'>
 				Hop into the future
 				<br />
-				of comic industry!
+				of the comics industry!
 			</Typography>
 			<Hidden mdDown>
 				<Typography className='text'>
@@ -52,27 +53,33 @@ const HeroSection: React.FC<Props> = ({ animate = false, observationRef, ...prop
 
 				<div className={clsx('hero-gradient', animate ? 'visible' : '')} />
 				<Slide in={animate} direction='up' timeout={{ enter: 1800 }}>
-					<Image src={HeroImage1} alt='' sizes='(max-width: 900px) 100vw' className='hero-image hero-image--1' />
+					<Image priority src={HeroImage1} alt='' height={124} width={133} className='hero-image hero-image--1' />
 				</Slide>
 				<Slide in={animate} direction='up' timeout={{ enter: 2500 }}>
-					<Image src={HeroImage2} alt='' sizes='(max-width: 900px) 100vw' className='hero-image hero-image--2' />
+					<Image priority src={HeroImage2} alt='' height={361} width={381} className='hero-image hero-image--2' />
 				</Slide>
 				<Slide in={animate} direction='up' timeout={{ enter: 1700 }}>
-					<Image src={HeroImage3} alt='' sizes='(max-width: 900px) 100vw' className='hero-image hero-image--3' />
+					<Image priority src={HeroImage3} alt='' height={889} width={482} className='hero-image hero-image--3' />
 				</Slide>
 				<Slide in={animate} direction='up' timeout={{ enter: 2100 }}>
-					<Image src={HeroImage4} alt='' sizes='(max-width: 900px) 100vw' className='hero-image hero-image--4' />
+					<Image priority src={HeroImage4} alt='' height={290} width={398} className='hero-image hero-image--4' />
 				</Slide>
 				<Slide in={animate} direction='up' timeout={{ enter: 2500 }}>
-					<Image src={HeroImage5} alt='' sizes='(max-width: 900px) 100vw' className='hero-image hero-image--5' />
+					<Image priority src={HeroImage5} alt='' height={390} width={311} className='hero-image hero-image--5' />
 				</Slide>
 			</Box>
 			<Hidden mdUp>
 				<Typography className='text'>
-					All-in-one app removing obstacles from digital collectibles for indie creators, publishers, brands, and
-					projects.
+					Discover, trade, collect, and read digital comics.&nbsp;
+					<a className='text--underline text--important' href='#newsletter'>
+						Join the waitlist
+					</a>
+					&nbsp;for early access!
 				</Typography>
 			</Hidden>
+			<Slide in={animate} direction='up' timeout={{ enter: 2000 }}>
+				<Image src={ComingSoonImage} alt='' height={246} width={854} className='image--coming-soon' />
+			</Slide>
 		</Box>
 	)
 }

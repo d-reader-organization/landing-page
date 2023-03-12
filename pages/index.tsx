@@ -3,17 +3,19 @@ import Box from '@mui/material/Box'
 import ChatSigningIcon from 'public/assets/vector-icons/chat-signing-icon.svg'
 import DiamondIcon from 'public/assets/vector-icons/diamond-icon.svg'
 import FundraisingImage from 'public/assets/fundraising.png'
+import FundraisingModalImage from 'public/assets/fundraising-modal.png'
 import ConditionsImage from 'public/assets/conditions.png'
 import ChatImage from 'public/assets/chat.png'
 import PigIcon from 'public/assets/vector-icons/pig-icon.svg'
 import NewsletterSection from 'components/NewsletterSection'
 import CreatorSection from 'components/CreatorSection'
 import Navigation from 'components/layout/Navigation'
+import HeroSection from 'components/HeroSection'
 import Section from 'components/layout/Section'
 import Footer from 'components/layout/Footer'
 import Main from 'components/layout/Main'
 import { useOnScreen } from 'hooks'
-import HeroSection from 'components/HeroSection'
+import Image from 'next/image'
 
 const Home: NextPage = () => {
 	const [animateHero, heroSectionRef] = useOnScreen()
@@ -33,10 +35,20 @@ const Home: NextPage = () => {
 					id='audience'
 					icon={<ChatSigningIcon />}
 					title='Engage with your audience'
-					text='Sign your copies and engage with fans in real-time, creating an immersive experience that will make them come for more.					'
+					text='Sign your copies and engage with fans in real-time, creating an immersive experience that will make them come back for more.					'
 					animate={animateAudience}
 					observationRef={audienceSectionRef}
 					src={ChatImage}
+					backgroundImage={
+						<Image
+							src='/assets/vector-icons/chat-background-icon.svg'
+							alt=''
+							sizes='80vw'
+							width={1125}
+							height={1270}
+							className='background background--circle'
+						/>
+					}
 				/>
 				<Section
 					id='fundraising'
@@ -46,12 +58,22 @@ const Home: NextPage = () => {
 					animate={animateFundraising}
 					observationRef={fundraisingSectionRef}
 					src={FundraisingImage}
+					backgroundImage={
+						<Image
+							src={FundraisingModalImage}
+							alt=''
+							sizes='50vw'
+							width={407}
+							height={331}
+							className='background background--fundraising'
+						/>
+					}
 					reverse
 				/>
 				<Section
 					id='collecting'
 					icon={<DiamondIcon />}
-					title='Rarity and comic conditions'
+					title='Collect & store rare comics'
 					text="Keep your comics in mint condition or see them change as you dive into the story. With the ability to get your comics signed by creators, you'll have a truly unique collecting experience!"
 					animate={animateCollecting}
 					observationRef={collectingSectionRef}

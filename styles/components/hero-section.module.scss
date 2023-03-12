@@ -58,7 +58,7 @@
 		position: relative;
 		width: 100%;
 
-		margin: 2rem 0;
+		margin-bottom: 2rem;
 
 		@include sm {
 			margin: 0;
@@ -119,6 +119,7 @@
 						width: 12%;
 						height: auto;
 						display: block;
+						max-width: 133px;
 					}
 				}
 
@@ -128,6 +129,7 @@
 					z-index: -2;
 					width: 28%;
 					height: auto;
+					max-width: 381px;
 				}
 
 				&--3 {
@@ -136,6 +138,7 @@
 					z-index: -4;
 					width: 50%;
 					height: auto;
+					max-width: 482px;
 				}
 
 				&--4 {
@@ -144,6 +147,7 @@
 					z-index: -1;
 					width: 30%;
 					height: auto;
+					max-width: 398px;
 				}
 
 				&--5 {
@@ -152,6 +156,7 @@
 					z-index: -3;
 					width: 24%;
 					height: auto;
+					max-width: 311px;
 				}
 			}
 		}
@@ -169,6 +174,7 @@
 					z-index: -5;
 					width: 8%;
 					height: auto;
+					max-width: 133px;
 
 					bottom: 40%;
 
@@ -191,6 +197,7 @@
 					z-index: -2;
 					width: 24%;
 					height: auto;
+					max-width: 381px;
 				}
 
 				&--3 {
@@ -200,6 +207,7 @@
 					width: 26%;
 					height: auto;
 					min-width: 280px;
+					max-width: 482px;
 				}
 
 				&--4 {
@@ -208,6 +216,7 @@
 					z-index: -1;
 					width: 25%;
 					height: auto;
+					max-width: 398px;
 				}
 
 				&--5 {
@@ -216,8 +225,16 @@
 					z-index: -3;
 					width: 20%;
 					height: auto;
+					max-width: 311px;
 				}
 			}
 		}
+	}
+
+	.image--coming-soon {
+		width: 100%;
+		height: auto;
+		max-width: 260px;
+		margin-top: 1rem;
 	}
 }
