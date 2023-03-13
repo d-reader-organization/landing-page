@@ -1,14 +1,14 @@
 import React from 'react'
-import { Box, BoxProps, Typography, Hidden, Slide } from '@mui/material'
+import { Box, BoxProps, Typography, Hidden, Slide, Fade } from '@mui/material'
+import ComingSoonImage from 'public/assets/coming-soon.png'
 import HeroImage1 from 'public/assets/hero-1.png'
 import HeroImage2 from 'public/assets/hero-2.png'
 import HeroImage3 from 'public/assets/hero-3.png'
 import HeroImage4 from 'public/assets/hero-4.png'
 import HeroImage5 from 'public/assets/hero-5.png'
-import ComingSoonImage from 'public/assets/coming-soon.png'
+import { useToggle } from 'hooks'
 import Image from 'next/image'
 import clsx from 'clsx'
-import { useToggle } from 'hooks'
 
 interface Props extends BoxProps {
 	animate: boolean
@@ -119,9 +119,9 @@ const HeroSection: React.FC<Props> = ({ animate = false, observationRef, ...prop
 					&nbsp;for early access!
 				</Typography>
 			</Hidden>
-			<Slide in={animate} direction='up' timeout={{ enter: 2000 }}>
+			<Fade in={animate} timeout={{ enter: 3000 }}>
 				<Image src={ComingSoonImage} alt='' height={246} width={854} className='image--coming-soon' />
-			</Slide>
+			</Fade>
 		</Box>
 	)
 }
