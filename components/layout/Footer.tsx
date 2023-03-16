@@ -25,7 +25,7 @@ const Footer: React.FC<Props> = ({ animate = false, ...props }) => {
 							<TwitterIcon />
 							<Typography component='span'>Twitter</Typography>
 						</Button>
-						<Button href='https://discord.gg/BfCqPu63ZX' rel='noreferrer' target='_blank'>
+						<Button href='https://discord.gg/rrZsRvC9mh' rel='noreferrer' target='_blank'>
 							<DiscordIcon />
 							<Typography component='span'>Discord</Typography>
 						</Button>
