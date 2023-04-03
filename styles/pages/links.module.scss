@@ -1,0 +1,54 @@
+@use '../variables/theme.module.scss' as *;
+@use '../mixins/breakpoints.module.scss' as *;
+
+.links {
+	background-image: url('../../public/assets/banner.png');
+	// background-size: auto 100%;
+	background-size: cover;
+	background-position: center;
+
+	.link-tree-list {
+		padding: 2rem 2rem 6rem 2rem;
+		& > *:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+
+		.link-tree-button {
+			background-color: $important-color !important;
+			color: $primary-color !important;
+			min-height: 46px;
+
+			&:hover {
+				filter: brightness(0.9);
+			}
+
+			svg {
+				color: $primary-color;
+				width: 100% !important;
+				height: auto !important;
+				max-width: 24px !important;
+				max-height: 24px !important;
+				font-size: 24px !important;
+
+				margin-right: 0.2rem;
+				@include sm {
+					margin-right: 0.4rem;
+				}
+
+				@include md {
+					margin-right: 0.6rem;
+				}
+			}
+
+			svg.icon--linkedin {
+				max-width: 28px !important;
+				max-height: 28px !important;
+				font-size: 28px !important;
+			}
+
+			span {
+				min-width: 72px;
+			}
+		}
+	}
+}

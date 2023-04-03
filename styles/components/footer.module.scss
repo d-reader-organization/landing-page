@@ -36,6 +36,13 @@
 		@include md {
 			margin: 3rem 0;
 		}
+
+		&--positioned {
+			display: none;
+			@include md {
+				display: block;
+			}
+		}
 	}
 
 	.footer-navigation {
@@ -93,6 +100,7 @@
 
 		.copyright {
 			@include centeredRow;
+			margin-left: auto;
 			white-space: nowrap;
 		}
 
