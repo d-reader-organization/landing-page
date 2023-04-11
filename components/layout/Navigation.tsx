@@ -13,7 +13,7 @@ const Navigation: React.FC<ToolbarProps> = (props) => {
 
 	return (
 		<Toolbar component='nav' className='navigation' {...props}>
-			<a aria-label='homepage' href='https://www.dreader.io' rel='noreferrer' target='_blank' className='logo-wrapper'>
+			<a aria-label='homepage' href='https://www.dreader.io' className='logo-wrapper'>
 				<LogoIcon className='logo' />
 			</a>
 
