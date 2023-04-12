@@ -29,7 +29,7 @@ const CreatorSection: React.FC<Props> = ({ animate = false, observationRef, clas
 				Unlock the full potential of your creativity and connect with a new kind of audience on dReader. Reach out to us
 				and publish your story on chain!
 			</Typography>
-			<Link href='mailto:admin@dreader.io' rel='noreferrer' target='_blank' className='link'>
+			<Link href='mailto:creators@dreader.io' rel='noreferrer' target='_blank' className='link'>
 				Schedule a call 🤙
 			</Link>
 		</Box>
