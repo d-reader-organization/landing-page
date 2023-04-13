@@ -2,13 +2,14 @@
 @use '../mixins/breakpoints.module.scss' as *;
 
 .links {
+	min-height: 100vh;
 	background-image: url('../../public/assets/banner.png');
 	// background-size: auto 100%;
 	background-size: cover;
 	background-position: center;
 
 	.link-tree-list {
-		padding: 2rem 2rem 6rem 2rem;
+		padding: 2rem;
 		& > *:not(:last-child) {
 			margin-bottom: 1.2rem;
 		}
@@ -48,6 +49,7 @@
 
 			span {
 				min-width: 72px;
+				font-weight: bold;
 			}
 		}
 	}
