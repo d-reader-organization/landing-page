@@ -9,13 +9,13 @@ First, make sure your node version matches the one specified in `.nvmrc`
 Install dependencies and copy the `.env.example` content into `.env`:
 
 ```bash
-npm install & cp .env.example .env.local
+yarn add & cp .env.example .env.local
 ```
 
 Then start the app:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
