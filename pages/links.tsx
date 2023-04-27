@@ -59,7 +59,7 @@ const Links: NextPage = () => {
 					<Button
 						className='link-tree-button'
 						fullWidth
-						href='https://drive.google.com/file/d/1CsvUv0YhsnoV0-SfvldrM8UBuNg7o9FJ/view?usp=sharing'
+						href='https://drive.google.com/file/d/1ojhivpGnBkChOPaRDEKH4cqgdGwjYhxu/view?usp=share_link'
 						rel='noreferrer'
 						target='_blank'
 					>
