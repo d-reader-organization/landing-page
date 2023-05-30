@@ -35,10 +35,11 @@ const Section: React.FC<Props> = ({
 				spacing={2}
 				ref={containerRef}
 				flexDirection={{ xs: 'column-reverse', md: reverse ? 'row-reverse' : 'row' }}
+				// minHeight={620}
 			>
 				<Grid item xs={12} md={6} position='relative' textAlign={{ xs: 'center', md: reverse ? 'left' : 'right' }}>
 					<Fade in={animate} timeout={2000}>
-						<div>
+						<div style={{ minHeight: '100%' }}>
 							<div className='section-image-wrapper'>
 								<Image
 									loading='lazy'

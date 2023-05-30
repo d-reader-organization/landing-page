@@ -16,6 +16,7 @@
 	.section-image-wrapper {
 		position: relative;
 		width: fit-content;
+		min-height: 100% !important;
 
 		margin: 0 auto;
 
@@ -26,8 +27,7 @@
 
 	.section-image {
 		@include unclickable;
-		width: 100% !important;
-		height: auto !important;
+		height: 100% !important;
 
 		max-width: 300px;
 
@@ -35,7 +35,7 @@
 			max-width: 360px;
 		}
 
-		@include md {
+		@include lg {
 			max-width: 420px;
 		}
 	}
