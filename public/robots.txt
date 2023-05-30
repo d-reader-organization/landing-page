@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://dReader.io
+Host: https://dev.dreader.io
 
 # Sitemaps
-Sitemap: https://dReader.io/sitemap.xml
+Sitemap: https://dev.dreader.io/sitemap.xml
