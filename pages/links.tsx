@@ -5,6 +5,8 @@ import LogoIcon from 'public/assets/vector-icons/logo-icon.svg'
 import LogoImage from 'public/assets/logo.png'
 import TwitterIcon from 'public/assets/vector-icons/twitter-icon.svg'
 import DiscordIcon from 'public/assets/vector-icons/discord-icon.svg'
+import ThreadsIcon from 'public/assets/vector-icons/threads-icon.svg'
+import InstagramIcon from 'public/assets/vector-icons/instagram-icon.svg'
 import GitbookIcon from 'public/assets/vector-icons/gitbook-icon.svg'
 import GithubIcon from 'public/assets/vector-icons/github-icon.svg'
 import { PhoneAndroid, Mail } from '@mui/icons-material'
@@ -47,6 +49,29 @@ const Links: NextPage = () => {
 						<Typography component='span'>Pitch deck</Typography>
 					</Button>
 					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
+					<Box display='flex'>
+						<Button
+							className='link-tree-button link-tree-button--secondary'
+							fullWidth
+							href='https://www.threads.net/@d_reader_app'
+							rel='noreferrer'
+							target='_blank'
+							style={{ marginRight: '1rem' }}
+						>
+							<ThreadsIcon />
+							<Typography component='span'>Threads</Typography>
+						</Button>
+						<Button
+							className='link-tree-button link-tree-button--secondary'
+							fullWidth
+							href='https://www.instagram.com/d_reader_app'
+							rel='noreferrer'
+							target='_blank'
+						>
+							<InstagramIcon />
+							<Typography component='span'>Instagram</Typography>
+						</Button>
+					</Box>
 					<Box display='flex'>
 						<Button
 							className='link-tree-button link-tree-button--secondary'
