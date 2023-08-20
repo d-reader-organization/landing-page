@@ -20,7 +20,7 @@
 			min-height: 46px;
 
 			&:hover {
-				filter: brightness(0.9);
+				filter: brightness(1.4);
 			}
 
 			svg {
@@ -41,6 +41,17 @@
 				}
 			}
 
+			&--secondary {
+				border: 2px solid rgba(255, 255, 255, 0.6) !important;
+				background-color: $primary-color !important;
+				color: #fff !important;
+
+				svg,
+				svg path {
+					fill: white !important;
+				}
+			}
+
 			svg.icon--linkedin {
 				max-width: 28px !important;
 				max-height: 28px !important;
@@ -49,7 +60,7 @@
 
 			span {
 				min-width: 72px;
-				font-weight: bold;
+				// font-weight: bold;
 			}
 		}
 	}
