@@ -3,10 +3,10 @@ import Main from 'components/layout/Main'
 import { Box, Button, Container, Divider, Typography } from '@mui/material'
 import LogoIcon from 'public/assets/vector-icons/logo-icon.svg'
 import LogoImage from 'public/assets/logo.png'
+import logoShieldIcon from 'public/assets/logo-shield.png'
 import TwitterIcon from 'public/assets/vector-icons/twitter-icon.svg'
 import DiscordIcon from 'public/assets/vector-icons/discord-icon.svg'
-import ThreadsIcon from 'public/assets/vector-icons/threads-icon.svg'
-import InstagramIcon from 'public/assets/vector-icons/instagram-icon.svg'
+import GooglePlayIcon from 'public/assets/vector-icons/google-play-icon.svg'
 import GitbookIcon from 'public/assets/vector-icons/gitbook-icon.svg'
 import GithubIcon from 'public/assets/vector-icons/github-icon.svg'
 import { PhoneAndroid, Mail } from '@mui/icons-material'
@@ -35,11 +35,18 @@ const Links: NextPage = () => {
 						rel='noreferrer'
 						target='_blank'
 					>
-						<img className='logo' src={LogoImage.src} alt='' width='28' height='28' style={{ marginRight: '0.5rem' }} />
+						<img
+							className='logo'
+							src={logoShieldIcon.src}
+							alt=''
+							width='20'
+							height='20'
+							style={{ marginRight: '0.5rem' }}
+						/>
 						<Typography component='span'>Website</Typography>
 					</Button>
 					<Button
-						className='link-tree-button'
+						className='link-tree-button  link-tree-button--secondary'
 						fullWidth
 						href='https://drive.google.com/file/d/1ojhivpGnBkChOPaRDEKH4cqgdGwjYhxu/view?usp=share_link'
 						rel='noreferrer'
@@ -48,30 +55,17 @@ const Links: NextPage = () => {
 						<PhoneAndroid />
 						<Typography component='span'>Pitch deck</Typography>
 					</Button>
+					<Button
+						className='link-tree-button'
+						fullWidth
+						href='https://play.google.com/store/apps/details?id=io.app.dreader'
+						rel='noreferrer'
+						target='_blank'
+					>
+						<GooglePlayIcon />
+						<Typography component='span'>Google Play</Typography>
+					</Button>
 					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
-					<Box display='flex'>
-						<Button
-							className='link-tree-button link-tree-button--secondary'
-							fullWidth
-							href='https://www.threads.net/@d_reader_app'
-							rel='noreferrer'
-							target='_blank'
-							style={{ marginRight: '1rem' }}
-						>
-							<ThreadsIcon />
-							<Typography component='span'>Threads</Typography>
-						</Button>
-						<Button
-							className='link-tree-button link-tree-button--secondary'
-							fullWidth
-							href='https://www.instagram.com/d_reader_app'
-							rel='noreferrer'
-							target='_blank'
-						>
-							<InstagramIcon />
-							<Typography component='span'>Instagram</Typography>
-						</Button>
-					</Box>
 					<Box display='flex'>
 						<Button
 							className='link-tree-button link-tree-button--secondary'
