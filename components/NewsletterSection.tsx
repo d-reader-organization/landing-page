@@ -31,8 +31,7 @@ const NewsletterSection: React.FC<Props> = ({ animate = false, observationRef, c
 						<Hidden mdDown>
 							Subscribe as an <span className='text--underline'>early adopter</span> & apply
 							<br />
-							for&nbsp;
-							<span className='text--important'>free Comic NFT</span> drops!
+							for <span className='text--important'>free Comic NFT</span> drops!
 						</Hidden>
 					</Typography>
 					<DummyForm />
