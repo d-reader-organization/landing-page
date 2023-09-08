@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, BoxProps, Typography, Hidden } from '@mui/material'
 import bunBunImage from 'public/assets/bun-bun.png'
-import DummyForm from './DummyForm'
 import Image from 'next/image'
 import clsx from 'clsx'
 
@@ -34,7 +33,6 @@ const NewsletterSection: React.FC<Props> = ({ animate = false, observationRef, c
 							for <span className='text--important'>free Comic NFT</span> drops!
 						</Hidden>
 					</Typography>
-					<DummyForm />
 				</Box>
 				<Image loading='lazy' src={bunBunImage} alt='' width={250} height={450} className='bun-bun' />
 			</Box>
