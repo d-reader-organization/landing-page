@@ -13,6 +13,10 @@
 		padding: 6rem 2rem;
 	}
 
+	@include lg {
+		padding: 8rem 2rem;
+	}
+
 	.section-image-wrapper {
 		position: relative;
 		width: fit-content;

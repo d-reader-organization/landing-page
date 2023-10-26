@@ -253,6 +253,7 @@
 		max-width: 260px;
 		margin-top: 2rem;
 		border-radius: 0.5rem;
-		box-shadow: 8px 8px 8px black;
+		box-shadow: 16px 16px 16px black;
+		@include clickable;
 	}
 }

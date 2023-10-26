@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, BoxProps, Typography, Hidden, Slide, Fade } from '@mui/material'
+import { Box, BoxProps, Typography, Hidden, Slide } from '@mui/material'
 import ComingSoonImage from 'public/assets/coming-soon.png'
 import HeroImage1 from 'public/assets/hero-1.png'
 import HeroImage2 from 'public/assets/hero-2.png'
@@ -30,15 +30,11 @@ const HeroSection: React.FC<Props> = ({ animate = false, observationRef, ...prop
 				of the comics industry!
 			</Typography>
 			<Hidden mdDown>
-				<Typography className='text'>
-					Discover, trade, collect, and read digital comics.
-					<br />
-					<a className='text--underline text--important' href='#newsletter'>
-						Join the waitlist
-					</a>
-					&nbsp;for early access!
-				</Typography>
+				<Typography className='text'>Discover, trade, collect, and read digital comics.</Typography>
 			</Hidden>
+			<a href='https://play.google.com/store/apps/details?id=io.app.dreader' target='_blank'>
+				<Image src={ComingSoonImage} alt='' height={246} width={854} className='image--coming-soon' />
+			</a>
 			<Box className='hero-image-wrapper'>
 				<Box
 					position='absolute'
@@ -119,9 +115,6 @@ const HeroSection: React.FC<Props> = ({ animate = false, observationRef, ...prop
 					&nbsp;for early access!
 				</Typography>
 			</Hidden>
-			<Fade in={animate} timeout={{ enter: 3000 }}>
-				<Image src={ComingSoonImage} alt='' height={246} width={854} className='image--coming-soon' />
-			</Fade>
 		</Box>
 	)
 }

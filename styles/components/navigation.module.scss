@@ -37,17 +37,7 @@
 
 		.logo {
 			padding: 2px;
-		}
-	}
-
-	.navigation-items {
-		margin-left: auto;
-	}
-
-	.navigation-items {
-		> a:not(:last-child),
-		> button:not(:last-child) {
-			margin-right: 0.5rem;
+			margin-right: auto;
 		}
 	}
 }

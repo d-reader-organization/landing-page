@@ -7,7 +7,6 @@ import FundraisingModalImage from 'public/assets/fundraising-modal.png'
 import ConditionsImage from 'public/assets/conditions.png'
 import ChatImage from 'public/assets/chat.png'
 import PigIcon from 'public/assets/vector-icons/pig-icon.svg'
-import NewsletterSection from 'components/NewsletterSection'
 import CreatorSection from 'components/CreatorSection'
 import Navigation from 'components/layout/Navigation'
 import HeroSection from 'components/HeroSection'
@@ -23,7 +22,6 @@ const Home: NextPage = () => {
 	const [animateFundraising, fundraisingSectionRef] = useOnScreen()
 	const [animateCollecting, collectingSectionRef] = useOnScreen()
 	const [animateCreators, creatorSectionRef] = useOnScreen()
-	const [animateNewsletter, newsletterSectionRef] = useOnScreen()
 
 	return (
 		<Box className='content'>
@@ -79,7 +77,6 @@ const Home: NextPage = () => {
 					observationRef={collectingSectionRef}
 					src={ConditionsImage}
 				/>
-				<NewsletterSection animate={animateNewsletter} observationRef={newsletterSectionRef} />
 				<CreatorSection animate={animateCreators} observationRef={creatorSectionRef} />
 			</Main>
 
