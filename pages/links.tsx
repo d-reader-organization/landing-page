@@ -30,7 +30,7 @@ const Links: NextPage = () => {
 					<Button
 						className='link-tree-button link-tree-button--secondary'
 						fullWidth
-						href='https://www.dreader.io'
+						href='https://www.dreader.app'
 						rel='noreferrer'
 						target='_blank'
 					>
@@ -42,17 +42,7 @@ const Links: NextPage = () => {
 							height='20'
 							style={{ marginRight: '0.5rem' }}
 						/>
-						<Typography component='span'>Website</Typography>
-					</Button>
-					<Button
-						className='link-tree-button  link-tree-button--secondary'
-						fullWidth
-						href='https://drive.google.com/file/d/1ojhivpGnBkChOPaRDEKH4cqgdGwjYhxu/view?usp=share_link'
-						rel='noreferrer'
-						target='_blank'
-					>
-						<PhoneAndroid />
-						<Typography component='span'>Pitch deck</Typography>
+						<Typography component='span'>Web app</Typography>
 					</Button>
 					<Button
 						className='link-tree-button'
@@ -63,6 +53,16 @@ const Links: NextPage = () => {
 					>
 						<GooglePlayIcon />
 						<Typography component='span'>Google Play</Typography>
+						<Button
+							className='link-tree-button  link-tree-button--secondary'
+							fullWidth
+							href='https://drive.google.com/file/d/1ZdwpoxUqnbrIsZXXiUrs1vwemvH0cXTx/view?usp=drive_link'
+							rel='noreferrer'
+							target='_blank'
+						>
+							<PhoneAndroid />
+							<Typography component='span'>Pitch deck</Typography>
+						</Button>
 					</Button>
 					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
 					<Box display='flex'>
