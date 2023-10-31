@@ -53,16 +53,16 @@ const Links: NextPage = () => {
 					>
 						<GooglePlayIcon />
 						<Typography component='span'>Google Play</Typography>
-						<Button
-							className='link-tree-button  link-tree-button--secondary'
-							fullWidth
-							href='https://drive.google.com/file/d/1tNLGROtNE-DLLqwad7qvpn8vKHhm9QNY/view?usp=sharing'
-							rel='noreferrer'
-							target='_blank'
-						>
-							<PhoneAndroid />
-							<Typography component='span'>Pitch deck</Typography>
-						</Button>
+					</Button>
+					<Button
+						className='link-tree-button  link-tree-button--secondary'
+						fullWidth
+						href='https://drive.google.com/file/d/1tNLGROtNE-DLLqwad7qvpn8vKHhm9QNY/view?usp=sharing'
+						rel='noreferrer'
+						target='_blank'
+					>
+						<PhoneAndroid />
+						<Typography component='span'>Pitch deck</Typography>
 					</Button>
 					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
 					<Box display='flex'>
