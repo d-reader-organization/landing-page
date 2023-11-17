@@ -6,9 +6,8 @@ import logoShieldIcon from 'public/assets/logo-shield.png'
 import TwitterIcon from 'public/assets/vector-icons/twitter-icon.svg'
 import DiscordIcon from 'public/assets/vector-icons/discord-icon.svg'
 import GooglePlayIcon from 'public/assets/vector-icons/google-play-icon.svg'
-import GitbookIcon from 'public/assets/vector-icons/gitbook-icon.svg'
 import GithubIcon from 'public/assets/vector-icons/github-icon.svg'
-import { PhoneAndroid, Mail } from '@mui/icons-material'
+import { OndemandVideo, Mail } from '@mui/icons-material'
 import React from 'react'
 
 const Links: NextPage = () => {
@@ -28,26 +27,6 @@ const Links: NextPage = () => {
 			<Main className='main'>
 				<Container maxWidth='xs' className='link-tree-list'>
 					<Button
-						className='link-tree-button  link-tree-button--secondary'
-						fullWidth
-						href='https://drive.google.com/file/d/1tNLGROtNE-DLLqwad7qvpn8vKHhm9QNY/view?usp=sharing'
-						rel='noreferrer'
-						target='_blank'
-					>
-						<PhoneAndroid />
-						<Typography component='span'>Pitch deck</Typography>
-					</Button>
-					<Button
-						className='link-tree-button'
-						fullWidth
-						href='https://play.google.com/store/apps/details?id=io.app.dreader'
-						rel='noreferrer'
-						target='_blank'
-					>
-						<GooglePlayIcon />
-						<Typography component='span'>Google Play</Typography>
-					</Button>
-					<Button
 						className='link-tree-button link-tree-button--secondary'
 						fullWidth
 						href='https://www.dreader.app'
@@ -64,8 +43,54 @@ const Links: NextPage = () => {
 						/>
 						<Typography component='span'>Web app 🚧</Typography>
 					</Button>
-
+					<Button
+						className='link-tree-button'
+						fullWidth
+						href='https://play.google.com/store/apps/details?id=io.app.dreader'
+						rel='noreferrer'
+						target='_blank'
+					>
+						<GooglePlayIcon />
+						<Typography component='span'>Google Play</Typography>
+					</Button>
 					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
+
+					<Button
+						className='link-tree-button'
+						fullWidth
+						href='https://drive.google.com/file/d/1tNLGROtNE-DLLqwad7qvpn8vKHhm9QNY/view?usp=sharing'
+						rel='noreferrer'
+						target='_blank'
+					>
+						<OndemandVideo />
+						<Typography component='span'>Main pitch video</Typography>
+					</Button>
+
+					<Box display='flex'>
+						<Button
+							className='link-tree-button'
+							fullWidth
+							href='https://youtu.be/HmRRaq2JaDo'
+							rel='noreferrer'
+							target='_blank'
+							style={{ marginRight: '1rem' }}
+						>
+							<OndemandVideo />
+							<Typography component='span'>dReader</Typography>
+						</Button>
+						<Button
+							className='link-tree-button link-tree-button--tertiary'
+							fullWidth
+							href='https://youtu.be/7MOtVZCmkJw'
+							rel='noreferrer'
+							target='_blank'
+						>
+							<OndemandVideo />
+							<Typography component='span'>dPublisher</Typography>
+						</Button>
+					</Box>
+					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
+
 					<Box display='flex'>
 						<Button
 							className='link-tree-button link-tree-button--secondary'
@@ -104,25 +129,14 @@ const Links: NextPage = () => {
 						<Button
 							className='link-tree-button link-tree-button--secondary'
 							fullWidth
-							href='https://docs.dreader.io'
+							href='mailto:office@dreader.io'
 							rel='noreferrer'
 							target='_blank'
 						>
-							<GitbookIcon />
-							<Typography component='span'>Gitbook</Typography>
+							<Mail />
+							<Typography component='span'>Contact</Typography>
 						</Button>
 					</Box>
-					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
-					<Button
-						className='link-tree-button'
-						fullWidth
-						href='mailto:office@dreader.io'
-						rel='noreferrer'
-						target='_blank'
-					>
-						<Mail />
-						<Typography component='span'>Contact us</Typography>
-					</Button>
 				</Container>
 			</Main>
 		</div>

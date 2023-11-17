@@ -9,7 +9,12 @@
 	background-position: center;
 
 	.link-tree-list {
-		padding: 2rem;
+		padding: 1rem;
+
+		@include sm {
+			padding: 2rem;
+		}
+
 		& > *:not(:last-child) {
 			margin-bottom: 1.2rem;
 		}
@@ -50,6 +55,10 @@
 				svg path {
 					fill: white !important;
 				}
+			}
+
+			&--tertiary {
+				background-color: #49c187 !important;
 			}
 
 			svg.icon--linkedin {
