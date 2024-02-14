@@ -7,7 +7,7 @@ import TwitterIcon from 'public/assets/vector-icons/twitter-icon.svg'
 import DiscordIcon from 'public/assets/vector-icons/discord-icon.svg'
 import GooglePlayIcon from 'public/assets/vector-icons/google-play-icon.svg'
 import GithubIcon from 'public/assets/vector-icons/github-icon.svg'
-import { OndemandVideo, Mail } from '@mui/icons-material'
+import { OndemandVideo, Instagram } from '@mui/icons-material'
 import React from 'react'
 
 const Links: NextPage = () => {
@@ -41,7 +41,7 @@ const Links: NextPage = () => {
 							height='20'
 							style={{ marginRight: '0.5rem' }}
 						/>
-						<Typography component='span'>Web app 🚧</Typography>
+						<Typography component='span'>Web app</Typography>
 					</Button>
 					<Button
 						className='link-tree-button'
@@ -54,17 +54,6 @@ const Links: NextPage = () => {
 						<Typography component='span'>Google Play</Typography>
 					</Button>
 					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
-
-					<Button
-						className='link-tree-button'
-						fullWidth
-						href='https://drive.google.com/file/d/1B_uMnpkNAA9y0PWhrL2-P5NYpY7ZSzc7/view?usp=drive_link'
-						rel='noreferrer'
-						target='_blank'
-					>
-						<OndemandVideo />
-						<Typography component='span'>Main pitch video</Typography>
-					</Button>
 
 					<Box display='flex'>
 						<Button
@@ -129,12 +118,12 @@ const Links: NextPage = () => {
 						<Button
 							className='link-tree-button link-tree-button--secondary'
 							fullWidth
-							href='mailto:office@dreader.io'
+							href='https://www.instagram.com/d_reader_app'
 							rel='noreferrer'
 							target='_blank'
 						>
-							<Mail />
-							<Typography component='span'>Contact</Typography>
+							<Instagram />
+							<Typography component='span'>Instagram</Typography>
 						</Button>
 					</Box>
 				</Container>
