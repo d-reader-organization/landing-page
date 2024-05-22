@@ -19,7 +19,7 @@ import { Footer } from 'components/layout/Footer'
 const Links: NextPage = () => {
 	return (
 		<div className='links'>
-			<Box margin='0 auto' padding='4rem 0 2rem 0' maxWidth={180}>
+			<Box margin='0 auto' padding='4rem 0 2rem 0' maxWidth={180} mb={[0, 8]}>
 				<a
 					aria-label='homepage'
 					href='https://www.dreader.io'

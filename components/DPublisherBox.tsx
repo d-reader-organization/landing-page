@@ -14,7 +14,7 @@ export const DPublisherBox: React.FC = () => {
 			actionButtonUrl='https://dpublisher.app'
 			demoBackgroundImage={DPublisherScreens.src}
 			demoLink='https://youtu.be/7MOtVZCmkJw'
-			descriptionText='Onboarding platform for creators on dReader app.'
+			descriptionText='Platform for self-publishing digital comics on dReader.'
 			mobileSvgComponent={<DPublisherAppForMobileIcon />}
 			svgComponent={<DPublisherAppIcon />}
 			title={
