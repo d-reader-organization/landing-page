@@ -1,0 +1,17 @@
+@use '../variables/theme.module.scss' as *;
+@use '../mixins/breakpoints.module.scss' as *;
+
+.title-with-button {
+	display: flex;
+	gap: 0.5rem;
+	.title {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 19.2px;
+
+		@include sm {
+			font-size: 24px;
+		}
+	}
+}

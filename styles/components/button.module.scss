@@ -1,0 +1,77 @@
+@use '../mixins/common.module.scss' as *;
+@use '../variables/theme.module.scss' as *;
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 14px 12px;
+	border-radius: 30px;
+	border: 0;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 14.4px;
+	text-decoration: none;
+	width: 100%;
+
+	&:hover {
+		cursor: pointer;
+		filter: brightness(0.9);
+	}
+
+	&--background-color-yellow {
+		background: $important-color;
+		color: $primary-color;
+	}
+
+	&--background-color-green {
+		background: $green-color;
+		color: $primary-color;
+	}
+
+	&--background-color-grey {
+		background: #ffffff1a;
+		color: #ffffff;
+	}
+}
+
+.button-chip {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.25rem 0.5rem;
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 12px;
+	border-radius: 14px;
+	border: 0;
+	height: min-content;
+
+	&--disabled {
+		background-color: white;
+	}
+
+	$light-blue-color: #afffff;
+	$light-yellow-color: #fffcaf;
+	$light-green-color: #c9fdea;
+
+	&--background-color-white {
+		background: #ffffff;
+		color: #000000;
+	}
+
+	&--background-color-light-blue {
+		background: $light-blue-color;
+		color: $primary-color;
+	}
+
+	&--background-color-light-yellow {
+		background: $light-yellow-color;
+		color: $primary-color;
+	}
+
+	&--background-color-light-green {
+		background: $light-green-color;
+		color: $primary-color;
+	}
+}

@@ -1,19 +1,25 @@
 import type { NextPage } from 'next'
 import Main from 'components/layout/Main'
-import { Box, Button, Container, Divider, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import LogoIcon from 'public/assets/vector-icons/logo-icon.svg'
-import logoShieldIcon from 'public/assets/logo-shield.png'
+import BunInTheHoleIcon from 'public/assets/vector-icons/bun-in-the-hole-icon.svg'
 import TwitterIcon from 'public/assets/vector-icons/twitter-icon.svg'
 import DiscordIcon from 'public/assets/vector-icons/discord-icon.svg'
-import GooglePlayIcon from 'public/assets/vector-icons/google-play-icon.svg'
+import TensorIcon from 'public/assets/vector-icons/tensor-icon.svg'
 import GithubIcon from 'public/assets/vector-icons/github-icon.svg'
-import { OndemandVideo, Instagram } from '@mui/icons-material'
+import InstagramIcon from 'public/assets/vector-icons/instagram-icon.svg'
 import React from 'react'
+import { GooglePlayBox } from 'components/GooglePlayBox'
+import { AppleStoreBox } from 'components/AppleStoreBox'
+import { DReaderWebBox } from 'components/DReaderWebBox'
+import { DPublisherBox } from 'components/DPublisherBox'
+import { SocialIconBox } from 'components/SocialIconBox'
+import { Footer } from 'components/layout/Footer'
 
 const Links: NextPage = () => {
 	return (
 		<div className='links'>
-			<Box margin='0 auto' padding='4rem 0 1rem 0' maxWidth={180}>
+			<Box margin='0 auto' padding='4rem 0 2rem 0' maxWidth={180}>
 				<a
 					aria-label='homepage'
 					href='https://www.dreader.io'
@@ -25,109 +31,40 @@ const Links: NextPage = () => {
 				</a>
 			</Box>
 			<Main className='main'>
-				<Container maxWidth='xs' className='link-tree-list'>
-					<Button
-						className='link-tree-button link-tree-button--secondary'
-						fullWidth
-						href='https://www.dreader.app'
-						rel='noreferrer'
-						target='_blank'
-					>
-						<img
-							className='logo'
-							src={logoShieldIcon.src}
-							alt=''
-							width='20'
-							height='20'
-							style={{ marginRight: '0.5rem' }}
-						/>
-						<Typography component='span'>Web app</Typography>
-					</Button>
-					<Button
-						className='link-tree-button'
-						fullWidth
-						href='https://play.google.com/store/apps/details?id=io.app.dreader'
-						rel='noreferrer'
-						target='_blank'
-					>
-						<GooglePlayIcon />
-						<Typography component='span'>Google Play</Typography>
-					</Button>
-					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
-
-					<Box display='flex'>
-						<Button
-							className='link-tree-button'
-							fullWidth
-							href='https://youtu.be/HmRRaq2JaDo'
-							rel='noreferrer'
-							target='_blank'
-							style={{ marginRight: '1rem' }}
-						>
-							<OndemandVideo />
-							<Typography component='span'>dReader</Typography>
-						</Button>
-						<Button
-							className='link-tree-button link-tree-button--tertiary'
-							fullWidth
-							href='https://youtu.be/7MOtVZCmkJw'
-							rel='noreferrer'
-							target='_blank'
-						>
-							<OndemandVideo />
-							<Typography component='span'>dPublisher</Typography>
-						</Button>
+				<Box display='flex' flexDirection='column' gap={4} maxWidth='md' width='100%' mx='auto' p={2}>
+					<Box display='flex' flexDirection={['column', 'row']} gap={4}>
+						<GooglePlayBox />
+						<AppleStoreBox />
 					</Box>
-					<Divider style={{ color: 'white', border: '1px solid rgba(255, 255, 255, 0.6)' }} />
+					<DReaderWebBox />
+					<DPublisherBox />
+					<Box display='flex' flexDirection='column' alignItems='center' gap={3} mt={4}>
+						<BunInTheHoleIcon />
+						<Typography component='span' fontSize={['14px', '18px']}>
+							Follow the white rabbit.
+						</Typography>
+					</Box>
 
-					<Box display='flex'>
-						<Button
-							className='link-tree-button link-tree-button--secondary'
-							fullWidth
-							href='https://twitter.com/dReaderApp'
-							rel='noreferrer'
-							target='_blank'
-							style={{ marginRight: '1rem' }}
-						>
+					<Box display='flex' justifyContent='center' gap={[2, 4]} mb={8} px={[1, 2]}>
+						<SocialIconBox href='https://twitter.com/dReaderApp'>
 							<TwitterIcon />
-							<Typography component='span'>Twitter</Typography>
-						</Button>
-						<Button
-							className='link-tree-button link-tree-button--secondary'
-							fullWidth
-							href='https://discord.gg/rrZsRvC9mh'
-							rel='noreferrer'
-							target='_blank'
-						>
+						</SocialIconBox>
+						<SocialIconBox href='https://discord.gg/rrZsRvC9mh'>
 							<DiscordIcon />
-							<Typography component='span'>Discord</Typography>
-						</Button>
-					</Box>
-					<Box display='flex'>
-						<Button
-							className='link-tree-button link-tree-button--secondary'
-							fullWidth
-							href='https://github.com/d-reader-organization'
-							rel='noreferrer'
-							target='_blank'
-							style={{ marginRight: '1rem' }}
-						>
+						</SocialIconBox>
+						<SocialIconBox href='https://www.tensor.trade/creator/dreader'>
+							<TensorIcon />
+						</SocialIconBox>
+						<SocialIconBox href='https://github.com/d-reader-organization'>
 							<GithubIcon />
-							<Typography component='span'>GitHub</Typography>
-						</Button>
-						<Button
-							className='link-tree-button link-tree-button--secondary'
-							fullWidth
-							href='https://www.instagram.com/d_reader_app'
-							rel='noreferrer'
-							target='_blank'
-						>
-							<Instagram />
-							<Typography component='span'>Instagram</Typography>
-						</Button>
+						</SocialIconBox>
+						<SocialIconBox href='https://www.instagram.com/d_reader_app'>
+							<InstagramIcon />
+						</SocialIconBox>
 					</Box>
-				</Container>
+				</Box>
 			</Main>
+			<Footer />
 		</div>
 	)
 }

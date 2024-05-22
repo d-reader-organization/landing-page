@@ -1,51 +1,29 @@
 import React from 'react'
-import { Box, BoxProps, Button, Typography } from '@mui/material'
-import TwitterIcon from 'public/assets/vector-icons/twitter-icon.svg'
-import DiscordIcon from 'public/assets/vector-icons/discord-icon.svg'
-import GitbookIcon from 'public/assets/vector-icons/gitbook-icon.svg'
-import GithubIcon from 'public/assets/vector-icons/github-icon.svg'
-import logoImage from 'public/assets/logo.png'
-import Image from 'next/image'
-import clsx from 'clsx'
+import { Box, Typography } from '@mui/material'
+import Link from 'next/link'
 
-interface Props extends BoxProps {
-	animate: boolean
-}
-
-const Footer: React.FC<Props> = ({ animate = false, ...props }) => {
+export const Footer: React.FC = () => {
 	return (
-		<Box component='footer' className={clsx('footer', animate ? 'visible' : '')} {...props}>
-			<Box className='footer-content'>
-				<Typography className='footer-title' variant='h5' component='p'>
-					Join the digital comics revolution!
+		<Box display='flex' flexDirection='column' gap={3} alignItems='center' padding={4}>
+			<Box display='flex' gap={4}>
+				<FooterLink href='https://dreader.app/privacy-policy' text='Privacy Policy' />
+				<FooterLink href='mailto:support@dreader.io' text='Contact Support' />
+			</Box>
+			<Box className='copyright'>
+				<Typography color='#777D8C' fontSize={['14px', '16px']} variant='body2'>
+					{`© ${new Date().getFullYear()} dReader.`}&nbsp;All rights reserved.
 				</Typography>
-				<Box className='footer-navigation'>
-					<Box className='footer-icons'>
-						<Button href='https://twitter.com/dReaderApp' rel='noreferrer' target='_blank'>
-							<TwitterIcon />
-							<Typography component='span'>Twitter</Typography>
-						</Button>
-						<Button href='https://discord.gg/rrZsRvC9mh' rel='noreferrer' target='_blank'>
-							<DiscordIcon />
-							<Typography component='span'>Discord</Typography>
-						</Button>
-						<Button href='https://docs.dreader.io' rel='noreferrer' target='_blank'>
-							<GitbookIcon />
-							<Typography component='span'>Gitbook</Typography>
-						</Button>
-						<Button href='https://github.com/d-reader-organization' rel='noreferrer' target='_blank'>
-							<GithubIcon />
-							<Typography component='span'>Github</Typography>
-						</Button>
-					</Box>
-					<Box className='copyright'>
-						<Image loading='lazy' className='logo' src={logoImage} width={96} height={96} alt='dReader' />
-						<Typography variant='body2'>{`© dReader / ${new Date().getFullYear()}`}</Typography>
-					</Box>
-				</Box>
 			</Box>
 		</Box>
 	)
 }
 
-export default Footer
+const FooterLink: React.FC<{ href: string; text: string }> = ({ href, text }) => {
+	return (
+		<Link className='text--decoration-none ' href={href} rel='noreferrer' target='_blank'>
+			<Typography component='span' color='white' fontSize={['14px', '16px']} lineHeight={['18.2px', '20.8px']}>
+				{text}
+			</Typography>
+		</Link>
+	)
+}

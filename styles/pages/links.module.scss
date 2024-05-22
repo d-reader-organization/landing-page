@@ -3,74 +3,64 @@
 
 .links {
 	min-height: 100vh;
-	background-image: url('../../public/assets/banner.png');
-	// background-size: auto 100%;
-	background-size: cover;
-	background-position: center;
+	background-color: $primary-color-light;
 
-	.link-tree-list {
+	&--mobile-box {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		position: relative;
+		border-radius: 8px;
 		padding: 1rem;
-
+		min-height: 111px;
+		text-decoration: none;
+		background-color: $primary-color;
 		@include sm {
-			padding: 2rem;
+			min-height: 170px;
+			border-radius: 16px;
 		}
+	}
 
-		& > *:not(:last-child) {
-			margin-bottom: 1.2rem;
+	&--web-box {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		border-radius: 8px;
+		padding: 1rem;
+		min-height: 111px;
+		text-decoration: none;
+		background-color: $primary-color;
+		@include md {
+			align-items: normal;
+			flex-direction: row;
+			border-radius: 16px;
+			min-height: 264px;
 		}
+	}
 
-		.link-tree-button {
-			background-color: $important-color !important;
-			color: $primary-color !important;
-			min-height: 46px;
+	.hero {
+		position: absolute;
+		right: 20px;
+		bottom: 0;
+	}
 
-			&:hover {
-				filter: brightness(1.4);
-			}
-
-			svg {
-				color: $primary-color;
-				width: 100% !important;
-				height: auto !important;
-				max-width: 24px !important;
-				max-height: 24px !important;
-				font-size: 24px !important;
-
-				margin-right: 0.2rem;
-				@include sm {
-					margin-right: 0.4rem;
-				}
-
-				@include md {
-					margin-right: 0.6rem;
-				}
-			}
-
-			&--secondary {
-				border: 2px solid rgba(255, 255, 255, 0.6) !important;
-				background-color: $primary-color !important;
-				color: #fff !important;
-
-				svg,
-				svg path {
-					fill: white !important;
-				}
-			}
-
-			&--tertiary {
-				background-color: #49c187 !important;
-			}
-
-			svg.icon--linkedin {
-				max-width: 28px !important;
-				max-height: 28px !important;
-				font-size: 28px !important;
-			}
-
-			span {
-				min-width: 72px;
-				// font-weight: bold;
-			}
+	.description-text {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 18.2px;
+		padding-inline: 16px;
+		text-align: center;
+		@include sm {
+			line-height: 23.4px;
+			font-size: 18px;
+			max-width: 270px;
+			padding-inline: 0;
+			text-align: start;
 		}
 	}
 }
