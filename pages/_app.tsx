@@ -6,11 +6,12 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import ToastProvider from 'providers/ToastProvider'
 import theme from 'styles/theme'
 import Head from 'next/head'
-import OgImage from 'public/assets/metadata.jpg'
+import MetadataImage from 'public/assets/metadata.jpg'
 import 'styles/app.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const [queryClient] = useState(() => new QueryClient())
+	const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${MetadataImage.src}`.replace(/(?<=\.io)\/{2}/, '/')
 
 	return (
 		<QueryClientProvider client={queryClient}>
@@ -23,13 +24,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 							name='viewport'
 							content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover'
 						/>
-						<meta property='og:image' content={`${process.env.NEXT_PUBLIC_SITE_URL}${OgImage.src}`} />
+						<meta property='og:image' content={ogImageUrl} />
 						<meta property='og:image:width' content='1200' />
 						<meta property='og:image:height' content='630' />
 						<meta property='og:image:alt' content='dReader Linktree' />
 						<meta name='twitter:title' content='dReader Linktree' />
 						<meta name='twitter:card' content='summary_large_image' />
-						<meta name='twitter:image' content={`${process.env.NEXT_PUBLIC_SITE_URL}${OgImage.src}`} />
+						<meta name='twitter:image' content={ogImageUrl} />
 						<title>dReader</title>
 					</Head>
 
