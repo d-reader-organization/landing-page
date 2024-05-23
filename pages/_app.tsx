@@ -28,9 +28,18 @@ function MyApp({ Component, pageProps }: AppProps) {
 						<meta property='og:image:width' content='1200' />
 						<meta property='og:image:height' content='630' />
 						<meta property='og:image:alt' content='dReader Linktree' />
+						<meta property='og:type' content='website'></meta>
+						<meta
+							property='og:description'
+							content='Affordable, Authentic & Limited Edition. From manga to comics, you can now own digital graphic novels from your favorite artists and get rewarded for collecting.'
+						/>
 						<meta name='twitter:title' content='dReader Linktree' />
 						<meta name='twitter:card' content='summary_large_image' />
 						<meta name='twitter:image' content={ogImageUrl} />
+						<meta
+							name='twitter:description'
+							content='Affordable, Authentic & Limited Edition. From manga to comics, you can now own digital graphic novels from your favorite artists and get rewarded for collecting.'
+						/>
 						<title>dReader</title>
 					</Head>
 
