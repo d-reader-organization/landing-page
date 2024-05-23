@@ -3,8 +3,7 @@ import { TitleWithButton } from './TitleWithButton'
 import { MobileBottomSection } from './MobileBottomSection'
 import AppleStoreIcon from 'public/assets/vector-icons/apple-store-icon.svg'
 import AppleStoreText from 'public/assets/vector-icons/apple-store-text.svg'
-import DarkBunImage from 'public/assets/dark-bun-desktop.png'
-import DarkBunImageMobile from 'public/assets/dark-bun-mobile.png'
+import Hellbun from 'public/assets/hellbun.png'
 import Image from 'next/image'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { Theme } from '@mui/material/styles/createTheme'
@@ -14,12 +13,15 @@ export const AppleStoreBox: React.FC = () => {
 	return (
 		<div className='links--mobile-box'>
 			<TitleWithButton buttonText='SOON' title='iOS app' buttonBackgroundColor='white' />
-			<MobileBottomSection left={<AppleStoreIcon />} right={<AppleStoreText />} css={{ opacity: '.5' }} />
+			<MobileBottomSection left={<AppleStoreIcon />} right={<AppleStoreText />} css={{ opacity: '.4' }} />
 			<Image
-				src={isMobile ? DarkBunImageMobile : DarkBunImage}
-				alt='dark-bun'
+				src={Hellbun}
+				alt='newbun'
 				className='hero'
-				style={{ right: isMobile ? 20 : 0 }}
+				width={isMobile ? 114 : 226}
+				height={isMobile ? 140 : 276}
+				style={{ right: isMobile ? undefined : 8 }}
+				quality={100}
 			/>
 		</div>
 	)

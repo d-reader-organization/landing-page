@@ -3,8 +3,7 @@ import { TitleWithButton } from './TitleWithButton'
 import { MobileBottomSection } from './MobileBottomSection'
 import GooglePlayIcon from 'public/assets/vector-icons/google-play-icon.svg'
 import GooglePlayText from 'public/assets/vector-icons/google-play-text.svg'
-import HellBunImage from 'public/assets/hell-bun-desktop.png'
-import HellBunImageMobile from 'public/assets/hell-bun-mobile.png'
+import DarkBun from 'public/assets/darkbun-flipped.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import useMediaQuery from '@mui/material/useMediaQuery'
@@ -20,7 +19,14 @@ export const GooglePlayBox: React.FC = () => {
 		>
 			<TitleWithButton buttonBackgroundColor='light-blue' buttonText='BETA' title='Android app' />
 			<MobileBottomSection left={<GooglePlayIcon />} right={<GooglePlayText />} />
-			<Image src={isMobile ? HellBunImageMobile : HellBunImage} alt='hell-bun' className='hero' />
+			<Image
+				src={DarkBun}
+				alt='newbun'
+				className='hero'
+				width={isMobile ? 108 : 191}
+				height={isMobile ? 156 : 276}
+				quality={100}
+			/>
 		</Link>
 	)
 }

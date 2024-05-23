@@ -16,8 +16,8 @@
 		min-height: 111px;
 		text-decoration: none;
 		background-color: $primary-color;
-		@include sm {
-			min-height: 170px;
+		@include md {
+			min-height: 194px;
 			border-radius: 16px;
 		}
 	}
@@ -44,7 +44,7 @@
 
 	.hero {
 		position: absolute;
-		right: 20px;
+		right: 24px;
 		bottom: 0;
 		-webkit-user-select: none; /* Safari */
 		-moz-user-select: none; /* Firefox */

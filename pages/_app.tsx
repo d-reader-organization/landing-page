@@ -24,7 +24,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 							content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover'
 						/>
 						<meta property='og:image' content={`${process.env.NEXT_PUBLIC_SITE_URL}${OgImage.src}`} />
-						<meta property='twitter:image' content={`${process.env.NEXT_PUBLIC_SITE_URL}${OgImage.src}`} />
+						<meta property='og:image:width' content='1200' />
+						<meta property='og:image:height' content='630' />
+						<meta property='og:image:alt' content='dReader Linktree' />
+						<meta name='twitter:title' content='dReader Linktree' />
+						<meta name='twitter:card' content='summary_large_image' />
+						<meta name='twitter:image' content={`${process.env.NEXT_PUBLIC_SITE_URL}${OgImage.src}`} />
 						<title>dReader</title>
 					</Head>
 
