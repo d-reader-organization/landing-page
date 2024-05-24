@@ -28,15 +28,9 @@ export const CommonWebBox: React.FC<Props> = ({
 }) => {
 	const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
 
-	const clickableTitle = (
-		<Link className='text--decoration-none' href={actionButtonUrl} target='_blank'>
-			{title}
-		</Link>
-	)
-
 	return isMobile ? (
-		<div className='links--web-box'>
-			{clickableTitle}
+		<Link href={actionButtonUrl} className='links--web-box' target='_blank'>
+			{title}
 			{mobileSvgComponent}
 			<Box mb={4} />
 			<span className='description-text'>{descriptionText}</span>
@@ -50,11 +44,11 @@ export const CommonWebBox: React.FC<Props> = ({
 					</Box>
 				</Button>
 			</Box>
-		</div>
+		</Link>
 	) : (
-		<div className='links--web-box'>
+		<Link href={actionButtonUrl} className='links--web-box' target='_blank'>
 			<Box display='flex' flexDirection='column' justifyContent='space-between'>
-				{clickableTitle}
+				{title}
 				<span className='description-text'>{descriptionText}</span>
 			</Box>
 
@@ -70,6 +64,6 @@ export const CommonWebBox: React.FC<Props> = ({
 			>
 				{svgComponent}
 			</div>
-		</div>
+		</Link>
 	)
 }

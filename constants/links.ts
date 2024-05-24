@@ -1,0 +1,13 @@
+export const HOME_LINK = process.env.NEXT_PUBLIC_SITE_URL
+export const TWITTER_LINK = 'https://twitter.com/dReaderApp'
+export const DISCORD_LINK = 'https://discord.gg/rrZsRvC9mh'
+export const TENSOR_LINK = 'https://www.tensor.trade/creator/dreader'
+export const GITHUB_LINK = 'https://github.com/d-reader-organization'
+export const INSTAGRAM_LINK = 'https://www.instagram.com/d_reader_app'
+export const GOOGLE_PLAY_LINK = 'https://play.google.com/store/apps/details?id=io.app.dreader'
+export const DREADER_WEB_LINK = 'https://www.dreader.app'
+export const DPUBLISHER_LINK = 'https://dpublisher.app'
+export const DREADER_DEMO_LINK = 'https://youtu.be/HmRRaq2JaDo'
+export const DPUBLISHER_DEMO_LINK = 'https://youtu.be/7MOtVZCmkJw'
+export const PRIVACY_POLICY_LINK = 'https://dreader.app/privacy-policy'
+export const CONTACT_SUPPORT_LINK = 'mailto:support@dreader.io'

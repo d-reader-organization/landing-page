@@ -6,14 +6,15 @@ import DPublisherAppForMobileIcon from 'public/assets/vector-icons/bun-dpublishe
 import Box from '@mui/material/Box'
 import DPublisherLogoIcon from 'public/assets/vector-icons/d-publisher-logo-icon.svg'
 import { Chip } from './Chip'
+import { DPUBLISHER_DEMO_LINK, DPUBLISHER_LINK } from 'constants/links'
 
 export const DPublisherBox: React.FC = () => {
 	return (
 		<CommonWebBox
 			actionButtonColor='green'
-			actionButtonUrl='https://dpublisher.app'
+			actionButtonUrl={DPUBLISHER_LINK}
 			demoBackgroundImage={DPublisherScreens.src}
-			demoLink='https://youtu.be/7MOtVZCmkJw'
+			demoLink={DPUBLISHER_DEMO_LINK}
 			descriptionText='Platform for self-publishing digital comics on dReader.'
 			mobileSvgComponent={<DPublisherAppForMobileIcon />}
 			svgComponent={<DPublisherAppIcon />}

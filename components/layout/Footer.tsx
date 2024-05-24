@@ -1,13 +1,14 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
+import { CONTACT_SUPPORT_LINK, PRIVACY_POLICY_LINK } from 'constants/links'
 
 export const Footer: React.FC = () => {
 	return (
 		<Box display='flex' flexDirection='column' gap={3} alignItems='center' padding={4}>
 			<Box display='flex' gap={4}>
-				<FooterLink href='https://dreader.app/privacy-policy' text='Privacy Policy' />
-				<FooterLink href='mailto:support@dreader.io' text='Contact Support' />
+				<FooterLink href={PRIVACY_POLICY_LINK} text='Privacy Policy' />
+				<FooterLink href={CONTACT_SUPPORT_LINK} text='Contact Support' />
 			</Box>
 			<Box className='copyright'>
 				<Typography color='#777D8C' fontSize={['14px', '16px']} variant='body2'>

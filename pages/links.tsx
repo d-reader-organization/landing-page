@@ -16,18 +16,13 @@ import { DPublisherBox } from 'components/DPublisherBox'
 import { SocialIconBox } from 'components/SocialIconBox'
 import { Footer } from 'components/layout/Footer'
 import { TensorBox } from 'components/TensorBox'
+import { DISCORD_LINK, GITHUB_LINK, HOME_LINK, INSTAGRAM_LINK, TENSOR_LINK, TWITTER_LINK } from 'constants/links'
 
 const Links: NextPage = () => {
 	return (
 		<div className='links'>
 			<Box margin='0 auto' padding='4rem 0 2rem 0' maxWidth={180} mb={[0, 8]}>
-				<a
-					aria-label='homepage'
-					href='https://www.dreader.io'
-					rel='noreferrer'
-					target='_blank'
-					className='logo-wrapper'
-				>
+				<a aria-label='homepage' href={HOME_LINK} rel='noreferrer' target='_blank' className='logo-wrapper'>
 					<LogoIcon className='logo' />
 				</a>
 			</Box>
@@ -48,19 +43,19 @@ const Links: NextPage = () => {
 					</Box>
 
 					<Box display='flex' justifyContent='center' gap={[2, 4]} mb={8} px={[1, 2]}>
-						<SocialIconBox href='https://twitter.com/dReaderApp'>
+						<SocialIconBox href={TWITTER_LINK}>
 							<TwitterIcon />
 						</SocialIconBox>
-						<SocialIconBox href='https://discord.gg/rrZsRvC9mh'>
+						<SocialIconBox href={DISCORD_LINK}>
 							<DiscordIcon />
 						</SocialIconBox>
-						<SocialIconBox href='https://www.tensor.trade/creator/dreader'>
+						<SocialIconBox href={TENSOR_LINK}>
 							<TensorIcon />
 						</SocialIconBox>
-						<SocialIconBox href='https://github.com/d-reader-organization'>
+						<SocialIconBox href={GITHUB_LINK}>
 							<GithubIcon />
 						</SocialIconBox>
-						<SocialIconBox href='https://www.instagram.com/d_reader_app'>
+						<SocialIconBox href={INSTAGRAM_LINK}>
 							<InstagramIcon />
 						</SocialIconBox>
 					</Box>

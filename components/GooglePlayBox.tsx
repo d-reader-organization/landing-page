@@ -8,15 +8,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { Theme } from '@mui/material/styles/createTheme'
+import { GOOGLE_PLAY_LINK } from 'constants/links'
 
 export const GooglePlayBox: React.FC = () => {
 	const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
 	return (
-		<Link
-			href='https://play.google.com/store/apps/details?id=io.app.dreader'
-			className='links--mobile-box'
-			target='_blank'
-		>
+		<Link href={GOOGLE_PLAY_LINK} className='links--mobile-box' target='_blank'>
 			<TitleWithButton buttonBackgroundColor='light-blue' buttonText='BETA' title='Android app' />
 			<MobileBottomSection left={<GooglePlayIcon />} right={<GooglePlayText />} />
 			<Image

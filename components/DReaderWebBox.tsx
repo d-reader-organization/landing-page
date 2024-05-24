@@ -6,13 +6,14 @@ import { Box } from '@mui/material'
 import { Chip } from './Chip'
 import DReaderScreens from 'public/assets/dreader-screens.png'
 import { CommonWebBox } from './CommonWebBox'
+import { DREADER_WEB_LINK, DREADER_DEMO_LINK } from 'constants/links'
 
 export const DReaderWebBox: React.FC = () => {
 	return (
 		<CommonWebBox
-			actionButtonUrl='https://www.dreader.app'
+			actionButtonUrl={DREADER_WEB_LINK}
 			demoBackgroundImage={DReaderScreens.src}
-			demoLink='https://youtu.be/HmRRaq2JaDo'
+			demoLink={DREADER_DEMO_LINK}
 			descriptionText='Platform for discovering, reading, trading & collecting digital comics.'
 			mobileSvgComponent={<BunWebAppForMobileIcon />}
 			svgComponent={<BunWebAppIcon />}

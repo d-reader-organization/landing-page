@@ -4,15 +4,11 @@ import TensorBgImage from 'public/assets/tensor.png'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
+import { TENSOR_LINK } from 'constants/links'
 
 export const TensorBox: React.FC = () => {
 	return (
-		<Link
-			href='https://www.tensor.trade/creator/dreader'
-			className='tensor-box text--decoration-none'
-			target='_blank'
-			rel='noreferrer'
-		>
+		<Link href={TENSOR_LINK} className='tensor-box text--decoration-none' target='_blank' rel='noreferrer'>
 			<Box
 				display='flex'
 				alignItems='center'
