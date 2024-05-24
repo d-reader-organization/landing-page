@@ -15,6 +15,7 @@ import { DReaderWebBox } from 'components/DReaderWebBox'
 import { DPublisherBox } from 'components/DPublisherBox'
 import { SocialIconBox } from 'components/SocialIconBox'
 import { Footer } from 'components/layout/Footer'
+import { TensorBox } from 'components/TensorBox'
 
 const Links: NextPage = () => {
 	return (
@@ -38,6 +39,7 @@ const Links: NextPage = () => {
 					</Box>
 					<DReaderWebBox />
 					<DPublisherBox />
+					<TensorBox />
 					<Box display='flex' flexDirection='column' alignItems='center' gap={3} mt={4}>
 						<BunInTheHoleIcon />
 						<Typography component='span' fontSize={['14px', '18px']}>
