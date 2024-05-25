@@ -22,7 +22,7 @@ export const DReaderWebBox: React.FC = () => {
 					<YellowLogoIcon />
 					<Box display='flex' gap={1}>
 						<Chip backgroundColor='white' text='WEB APP' />
-						<Chip backgroundColor='light-yellow' text='BETA' />
+						{/* <Chip backgroundColor='light-yellow' text='BETA' /> */}
 					</Box>
 				</Box>
 			}

@@ -3,7 +3,7 @@ import { Chip } from './Chip'
 
 interface Props {
 	buttonBackgroundColor?: 'light-blue' | 'light-yellow' | 'light-green' | 'white'
-	buttonText: string
+	buttonText?: string
 	title: string
 }
 
@@ -11,7 +11,7 @@ export const TitleWithButton: React.FC<Props> = ({ buttonBackgroundColor, button
 	return (
 		<div className='title-with-button'>
 			<span className='title'>{title}</span>
-			<Chip backgroundColor={buttonBackgroundColor} text={buttonText} />
+			{buttonText && <Chip backgroundColor={buttonBackgroundColor} text={buttonText} />}
 		</div>
 	)
 }

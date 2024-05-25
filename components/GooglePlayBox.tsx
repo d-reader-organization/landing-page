@@ -6,24 +6,14 @@ import GooglePlayText from 'public/assets/vector-icons/google-play-text.svg'
 import DarkBun from 'public/assets/darkbun-flipped.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { Theme } from '@mui/material/styles/createTheme'
 import { GOOGLE_PLAY_LINK } from 'constants/links'
 
 export const GooglePlayBox: React.FC = () => {
-	const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
 	return (
 		<Link href={GOOGLE_PLAY_LINK} className='links--mobile-box' target='_blank'>
-			<TitleWithButton buttonBackgroundColor='light-blue' buttonText='BETA' title='Android app' />
+			<TitleWithButton buttonBackgroundColor='light-blue' title='Android app' />
 			<MobileBottomSection left={<GooglePlayIcon />} right={<GooglePlayText />} />
-			<Image
-				src={DarkBun}
-				alt='newbun'
-				className='hero'
-				width={isMobile ? 108 : 191}
-				height={isMobile ? 156 : 276}
-				quality={100}
-			/>
+			<Image src={DarkBun} alt='newbun' className='hero hero--darkbun' width={160} height={319} quality={100} />
 		</Link>
 	)
 }

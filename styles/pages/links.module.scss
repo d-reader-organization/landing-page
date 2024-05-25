@@ -46,10 +46,41 @@
 		position: absolute;
 		right: 24px;
 		bottom: 0;
-		-webkit-user-select: none; /* Safari */
-		-moz-user-select: none; /* Firefox */
-		-ms-user-select: none; /* IE 10+ */
+		height: auto;
+		width: auto;
 		user-select: none;
+
+		@media (max-width: 310px) {
+			right: 2px;
+		}
+
+		@media (min-width: 580px) and (max-width: 660px) {
+			right: 2px;
+		}
+
+		&--darkbun {
+			max-width: 80px;
+
+			@media (min-width: 760px) {
+				max-width: 90px;
+			}
+
+			@include md {
+				max-width: 160px;
+			}
+		}
+
+		&--hellbun {
+			max-width: 90px;
+
+			@media (min-width: 760px) {
+				max-width: 120px;
+			}
+
+			@include md {
+				max-width: 200px;
+			}
+		}
 	}
 
 	.description-text {
