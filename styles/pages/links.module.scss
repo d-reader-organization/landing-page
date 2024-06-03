@@ -120,9 +120,17 @@
 
 		&--hellbun {
 			max-width: 140px;
-			right: 8px;
+
+			@include sm {
+				right: 8px;
+			}
+
 			@include md {
 				max-width: 254px;
+			}
+
+			@media (min-width: 580px) and (max-width: 640px) {
+				max-width: 112px;
 			}
 
 			@media (min-width: 900px) and (max-width: 930px) {
