@@ -5,24 +5,41 @@
 	min-height: 100vh;
 	background-color: $primary-color-light;
 
+	.box-padding {
+		padding: 18px;
+		@include md {
+			padding: 32px;
+		}
+	}
+
 	&--mobile-box {
+		@extend .box-padding;
 		display: flex;
 		width: 100%;
 		flex-direction: column;
 		justify-content: space-between;
 		position: relative;
 		border-radius: 8px;
-		padding: 1rem;
 		min-height: 111px;
 		text-decoration: none;
 		background-color: $primary-color;
+		margin-bottom: 8px;
 		@include md {
 			min-height: 194px;
 			border-radius: 16px;
 		}
 	}
 
+	&--web-box-title {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 12px;
+		text-decoration: none;
+	}
+
 	&--web-box {
+		@extend .box-padding;
 		display: flex;
 		width: 100%;
 		flex-direction: column;
@@ -30,7 +47,6 @@
 		align-items: center;
 		position: relative;
 		border-radius: 8px;
-		padding: 1rem;
 		min-height: 111px;
 		text-decoration: none;
 		background-color: $primary-color;
@@ -42,64 +58,8 @@
 		}
 	}
 
-	.hero {
-		position: absolute;
-		right: 24px;
-		bottom: 0;
-		height: auto;
-		width: auto;
-		user-select: none;
-
-		@media (max-width: 310px) {
-			right: 2px;
-		}
-
-		@media (min-width: 580px) and (max-width: 660px) {
-			right: 2px;
-		}
-
-		&--darkbun {
-			max-width: 80px;
-
-			@media (min-width: 760px) {
-				max-width: 90px;
-			}
-
-			@include md {
-				max-width: 160px;
-			}
-		}
-
-		&--hellbun {
-			max-width: 90px;
-
-			@media (min-width: 760px) {
-				max-width: 120px;
-			}
-
-			@include md {
-				max-width: 200px;
-			}
-		}
-	}
-
-	.description-text {
-		color: #ffffff;
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 18.2px;
-		padding-inline: 16px;
-		text-align: center;
-		@include sm {
-			line-height: 23.4px;
-			font-size: 18px;
-			max-width: 270px;
-			padding-inline: 0;
-			text-align: start;
-		}
-	}
-
 	.tensor-box {
+		@extend .box-padding;
 		display: flex;
 		align-items: center;
 		position: relative;
@@ -107,7 +67,6 @@
 		background: $primary-color;
 		border-radius: 16px;
 		min-height: 111px;
-
 		@include md {
 			align-items: start;
 			min-height: 194px;
@@ -133,6 +92,63 @@
 		margin-left: 80px;
 		@include md {
 			margin-left: 128px;
+		}
+	}
+
+	.hero {
+		position: absolute;
+		right: 24px;
+		bottom: 0;
+		height: auto;
+		width: auto;
+		user-select: none;
+
+		@media (max-width: 310px) {
+			right: 2px;
+		}
+
+		@media (min-width: 580px) and (max-width: 660px) {
+			right: 2px;
+		}
+
+		&--darkbun {
+			max-width: 108px;
+			@include md {
+				max-width: 191px;
+			}
+		}
+
+		&--hellbun {
+			max-width: 140px;
+			right: 8px;
+			@include md {
+				max-width: 254px;
+			}
+
+			@media (min-width: 900px) and (max-width: 930px) {
+				right: -8px;
+			}
+
+			@include lg {
+				right: 8px;
+				max-width: 262px;
+			}
+		}
+	}
+
+	.description-text {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 18.2px;
+		padding-inline: 16px;
+		text-align: center;
+		@include sm {
+			line-height: 23.4px;
+			font-size: 18px;
+			max-width: 270px;
+			padding-inline: 0;
+			text-align: start;
 		}
 	}
 }

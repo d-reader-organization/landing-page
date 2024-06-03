@@ -27,7 +27,7 @@ const Links: NextPage = () => {
 				</a>
 			</Box>
 			<Main className='main'>
-				<Box display='flex' flexDirection='column' gap={4} maxWidth='960px' width='100%' mx='auto' p={2}>
+				<Box display='flex' flexDirection='column' gap={4} maxWidth='1040px' width='100%' mx='auto' p={2}>
 					<Box display='flex' flexDirection={['column', 'row']} gap={4}>
 						<GooglePlayBox />
 						<AppleStoreBox />

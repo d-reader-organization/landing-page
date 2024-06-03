@@ -3,7 +3,6 @@ import PlayIcon from 'public/assets/vector-icons/play-icon.svg'
 import { Box, Theme, useMediaQuery } from '@mui/material'
 import { Button } from './Button'
 import { PlayDemoBox } from './PlayDemoBox'
-import Link from 'next/link'
 
 interface Props {
 	actionButtonColor?: 'yellow' | 'green' | 'grey'
@@ -29,7 +28,7 @@ export const CommonWebBox: React.FC<Props> = ({
 	const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
 
 	return isMobile ? (
-		<Link href={actionButtonUrl} className='links--web-box' target='_blank'>
+		<div className='links--web-box'>
 			{title}
 			{mobileSvgComponent}
 			<Box mb={4} />
@@ -44,9 +43,9 @@ export const CommonWebBox: React.FC<Props> = ({
 					</Box>
 				</Button>
 			</Box>
-		</Link>
+		</div>
 	) : (
-		<Link href={actionButtonUrl} className='links--web-box' target='_blank'>
+		<div className='links--web-box'>
 			<Box display='flex' flexDirection='column' justifyContent='space-between'>
 				{title}
 				<span className='description-text'>{descriptionText}</span>
@@ -64,6 +63,6 @@ export const CommonWebBox: React.FC<Props> = ({
 			>
 				{svgComponent}
 			</div>
-		</Link>
+		</div>
 	)
 }

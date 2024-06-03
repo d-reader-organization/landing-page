@@ -8,6 +8,24 @@ import theme from 'styles/theme'
 import Head from 'next/head'
 import MetadataImage from 'public/assets/metadata.jpg'
 import 'styles/app.scss'
+import localFont from 'next/font/local'
+
+const satoshi = localFont({
+	src: [
+		{ path: './fonts/Satoshi-Light.woff2', weight: '300', style: 'normal' },
+		{ path: './fonts/Satoshi-LightItalic.woff2', weight: '300', style: 'italic' },
+		{ path: './fonts/Satoshi-Regular.woff2', weight: '400', style: 'normal' },
+		{ path: './fonts/Satoshi-Italic.woff2', weight: '400', style: 'italic' },
+		{ path: './fonts/Satoshi-Medium.woff2', weight: '500', style: 'normal' },
+		{ path: './fonts/Satoshi-MediumItalic.woff2', weight: '500', style: 'italic' },
+		{ path: './fonts/Satoshi-Bold.woff2', weight: '700', style: 'normal' },
+		{ path: './fonts/Satoshi-BoldItalic.woff2', weight: '700', style: 'italic' },
+		{ path: './fonts/Satoshi-Black.woff2', weight: '900', style: 'normal' },
+		{ path: './fonts/Satoshi-BlackItalic.woff2', weight: '900', style: 'italic' },
+	],
+	display: 'swap',
+	preload: true,
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const [queryClient] = useState(() => new QueryClient())
@@ -42,8 +60,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 						/>
 						<title>dReader</title>
 					</Head>
-
-					<Component {...pageProps} />
+					<main className={satoshi.className}>
+						<Component {...pageProps} />
+					</main>
 				</ToastProvider>
 			</ThemeProvider>
 			<ReactQueryDevtools initialIsOpen={false} />

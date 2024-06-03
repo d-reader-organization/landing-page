@@ -9,15 +9,7 @@ import { TENSOR_LINK } from 'constants/links'
 export const TensorBox: React.FC = () => {
 	return (
 		<Link href={TENSOR_LINK} className='tensor-box text--decoration-none' target='_blank' rel='noreferrer'>
-			<Box
-				display='flex'
-				alignItems='center'
-				gap={1}
-				paddingX={[1, 2]}
-				paddingY={[2, 3]}
-				position='relative'
-				zIndex={2}
-			>
+			<Box display='flex' alignItems='center' gap={1} position='relative' zIndex={2}>
 				<Typography component='span' fontSize={[16, 24]} fontWeight={700} lineHeight='120%' color='white'>
 					Trade on Tensor
 				</Typography>

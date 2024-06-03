@@ -3,10 +3,10 @@ import { CommonWebBox } from './CommonWebBox'
 import DPublisherScreens from 'public/assets/dpublisher-screens.png'
 import DPublisherAppIcon from 'public/assets/vector-icons/bun-dpublisher-icon.svg'
 import DPublisherAppForMobileIcon from 'public/assets/vector-icons/bun-dpublisher-mobile-icon.svg'
-import Box from '@mui/material/Box'
 import DPublisherLogoIcon from 'public/assets/vector-icons/d-publisher-logo-icon.svg'
 import { Chip } from './Chip'
 import { DPUBLISHER_DEMO_LINK, DPUBLISHER_LINK } from 'constants/links'
+import Link from 'next/link'
 
 export const DPublisherBox: React.FC = () => {
 	return (
@@ -19,10 +19,10 @@ export const DPublisherBox: React.FC = () => {
 			mobileSvgComponent={<DPublisherAppForMobileIcon />}
 			svgComponent={<DPublisherAppIcon />}
 			title={
-				<Box display='flex' alignItems='center' gap={2} mb={1.5}>
+				<Link className='links--web-box-title' href={DPUBLISHER_LINK} target='_blank'>
 					<DPublisherLogoIcon />
 					<Chip backgroundColor='light-green' text='BETA' />
-				</Box>
+				</Link>
 			}
 		/>
 	)
