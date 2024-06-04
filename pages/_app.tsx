@@ -10,7 +10,7 @@ import MetadataImage from 'public/assets/metadata.jpg'
 import 'styles/app.scss'
 import localFont from 'next/font/local'
 
-const satoshi = localFont({
+export const satoshi = localFont({
 	src: [
 		{ path: './fonts/Satoshi-Light.woff2', weight: '300', style: 'normal' },
 		{ path: './fonts/Satoshi-LightItalic.woff2', weight: '300', style: 'italic' },

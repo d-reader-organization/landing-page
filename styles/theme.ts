@@ -1,4 +1,5 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
+import { satoshi } from 'pages/_app'
 import variables from 'styles/variables/theme.module.scss'
 
 const spacing = parseInt(variables.spacing || '8')
@@ -28,7 +29,7 @@ const defaultTheme = createTheme({
 	},
 	typography: {
 		fontSize: 14,
-		fontFamily: 'Urbanist, sans-serif',
+		fontFamily: satoshi.style.fontFamily,
 		// body1: { fontWeight: 500 },
 		// body2: { fontWeight: 500, fontFamily: 'Archivo Narrow' },
 		h1: { fontWeight: 'bold', fontSize: '5rem', lineHeight: 1.08 },
