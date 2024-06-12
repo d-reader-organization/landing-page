@@ -9,7 +9,14 @@ interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement
 	text?: string
 }
 
-export const Button: React.FC<Props> = ({ asLink = false, backgroundColor = 'yellow', children, href, text }) => {
+export const Button: React.FC<Props> = ({
+	asLink = false,
+	backgroundColor = 'yellow',
+	children,
+	href,
+	text,
+	...props
+}) => {
 	return asLink ? (
 		<Link
 			href={href ?? ''}
@@ -30,6 +37,7 @@ export const Button: React.FC<Props> = ({ asLink = false, backgroundColor = 'yel
 				'button--background-color-green ': backgroundColor === 'green',
 				'button--background-color-grey ': backgroundColor === 'grey',
 			})}
+			{...props}
 		>
 			{text}
 			{children}

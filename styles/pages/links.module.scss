@@ -30,14 +30,6 @@
 		}
 	}
 
-	&--web-box-title {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-		margin-bottom: 12px;
-		text-decoration: none;
-	}
-
 	&--web-box {
 		@extend .box-padding;
 		display: flex;
