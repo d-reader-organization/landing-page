@@ -6,7 +6,6 @@ import DPublisherAppForMobileIcon from 'public/assets/vector-icons/bun-dpublishe
 import DPublisherLogoIcon from 'public/assets/vector-icons/d-publisher-logo-icon.svg'
 import { Chip } from './Chip'
 import { DPUBLISHER_DEMO_LINK, DPUBLISHER_LINK } from 'constants/links'
-import Link from 'next/link'
 import Box from '@mui/material/Box'
 
 export const DPublisherBox: React.FC = () => {
