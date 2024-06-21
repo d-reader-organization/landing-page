@@ -27,9 +27,9 @@
 }
 
 .play-demo-content {
-	position: relative;
-	border-radius: 8px;
-	border: 8px solid #ffffff1a;
+	position: relative !important;
+	border-radius: 8px !important;
+	border: 8px solid #ffffff1a !important;
 	text-decoration: none;
 	z-index: 999;
 
