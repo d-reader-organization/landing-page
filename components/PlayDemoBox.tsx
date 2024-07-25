@@ -9,7 +9,14 @@ interface Props {
 
 export const PlayDemoBox: React.FC<Props> = ({ image, url }) => {
 	return (
-		<Button className='play-demo-content' onClick={() => window.open(url, '_blank')} title={url}>
+		<Button
+			className='play-demo-content'
+			onClick={(event) => {
+				event.preventDefault()
+				window.open(url, '_blank')
+			}}
+			title={url}
+		>
 			<img className='play-demo-bg' src={image} alt={`play-demo - ${image}`} />
 			<div className='play-demo-box'>
 				<PlayIcon />
