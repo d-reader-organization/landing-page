@@ -13,7 +13,15 @@ export const GooglePlayBox: React.FC = () => {
 		<Link href={GOOGLE_PLAY_LINK} className='links--mobile-box' target='_blank'>
 			<TitleWithButton buttonBackgroundColor='light-blue' title='Android app' />
 			<MobileBottomSection left={<GooglePlayIcon />} right={<GooglePlayText />} />
-			<Image src={DarkBun} alt='darkbun' className='hero hero--darkbun' width={191} height={319} quality={100} />
+			<Image
+				src={DarkBun}
+				alt='darkbun'
+				className='hero hero--darkbun'
+				width={191}
+				height={319}
+				quality={100}
+				priority
+			/>
 		</Link>
 	)
 }

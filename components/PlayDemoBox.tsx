@@ -1,6 +1,7 @@
 import React from 'react'
 import PlayIcon from 'public/assets/vector-icons/play-icon.svg'
 import { Button } from '@mui/material'
+import Image from 'next/image'
 
 interface Props {
 	image: string
@@ -17,7 +18,7 @@ export const PlayDemoBox: React.FC<Props> = ({ image, url }) => {
 			}}
 			title={url}
 		>
-			<img className='play-demo-bg' src={image} alt={`play-demo - ${image}`} />
+			<Image className='play-demo-bg' src={image} alt={`play-demo - ${image}`} width={500} height={500} />
 			<div className='play-demo-box'>
 				<PlayIcon />
 				<span>PLAY DEMO</span>

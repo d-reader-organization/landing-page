@@ -11,7 +11,15 @@ export const AppleStoreBox: React.FC = () => {
 		<div className='links--mobile-box'>
 			<TitleWithButton buttonText='SOON' title='iOS app' buttonBackgroundColor='white' />
 			<MobileBottomSection left={<AppleStoreIcon />} right={<AppleStoreText />} css={{ opacity: '.4' }} />
-			<Image src={Hellbun} alt='hellbun' className='hero hero--hellbun' width={262} height={278} quality={100} />
+			<Image
+				src={Hellbun}
+				alt='hellbun'
+				className='hero hero--hellbun'
+				width={262}
+				height={278}
+				quality={100}
+				priority
+			/>
 		</div>
 	)
 }
