@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 
 interface Props {
-	backgroundColor?: 'light-blue' | 'light-yellow' | 'light-green' | 'white'
+	backgroundColor?: 'light-blue' | 'light-yellow' | 'light-green' | 'light-blue' | 'white'
 	text: string
 }
 

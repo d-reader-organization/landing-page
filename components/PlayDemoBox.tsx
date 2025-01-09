@@ -6,9 +6,11 @@ import Image from 'next/image'
 interface Props {
 	image: string
 	url: string
+	buttonText: string
+	hidePlayIcon: boolean
 }
 
-export const PlayDemoBox: React.FC<Props> = ({ image, url }) => {
+export const PlayDemoBox: React.FC<Props> = ({ image, url, buttonText, hidePlayIcon }) => {
 	return (
 		<Button
 			className='play-demo-content'
@@ -20,8 +22,8 @@ export const PlayDemoBox: React.FC<Props> = ({ image, url }) => {
 		>
 			<Image className='play-demo-bg' src={image} alt={`play-demo - ${image}`} width={500} height={500} />
 			<div className='play-demo-box'>
-				<PlayIcon />
-				<span>PLAY DEMO</span>
+				{!hidePlayIcon && <PlayIcon />}
+				<span>{buttonText}</span>
 			</div>
 		</Button>
 	)

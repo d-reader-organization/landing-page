@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
 	asLink?: boolean
-	backgroundColor?: 'yellow' | 'green' | 'grey'
+	backgroundColor?: 'yellow' | 'green' | 'grey' | 'blue'
 	href?: string
 	text?: string
 }
@@ -24,6 +24,7 @@ export const Button: React.FC<Props> = ({
 				'button--background-color-yellow ': backgroundColor === 'yellow',
 				'button--background-color-green ': backgroundColor === 'green',
 				'button--background-color-grey ': backgroundColor === 'grey',
+				'button--background-color-blue ': backgroundColor === 'blue',
 			})}
 			target='_blank'
 		>
@@ -36,6 +37,7 @@ export const Button: React.FC<Props> = ({
 				'button--background-color-yellow ': backgroundColor === 'yellow',
 				'button--background-color-green ': backgroundColor === 'green',
 				'button--background-color-grey ': backgroundColor === 'grey',
+				'button--background-color-blue ': backgroundColor === 'blue',
 			})}
 			{...props}
 		>

@@ -6,13 +6,15 @@ import { PlayDemoBox } from './PlayDemoBox'
 import Link from 'next/link'
 
 interface Props {
-	actionButtonColor?: 'yellow' | 'green' | 'grey'
+	actionButtonColor?: 'yellow' | 'green' | 'grey' | 'blue'
 	actionButtonUrl: string
 	demoBackgroundImage: string
 	demoLink: string
 	descriptionText: string
-	mobileSvgComponent: React.ReactNode
-	svgComponent: React.ReactNode
+	buttonText?: string
+	hidePlayIcon?: boolean
+	mobileSvgComponent?: React.ReactNode
+	svgComponent?: React.ReactNode
 	title: React.ReactNode
 }
 
@@ -22,8 +24,10 @@ export const CommonWebBox: React.FC<Props> = ({
 	demoBackgroundImage,
 	demoLink,
 	descriptionText,
+	buttonText = 'PLAY DEMO',
 	mobileSvgComponent,
 	svgComponent,
+	hidePlayIcon = false,
 	title,
 }) => {
 	const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
@@ -38,9 +42,9 @@ export const CommonWebBox: React.FC<Props> = ({
 			<Box display='flex' flexDirection='column' gap={1.5} width='100%'>
 				<Button backgroundColor={actionButtonColor} href={actionButtonUrl} text='LAUNCH APP' />
 				<Button backgroundColor='grey' onClick={() => window.open(demoLink, '_blank')}>
-					<Box display='flex' alignItems='center' gap={1}>
-						<PlayIcon />
-						PLAY DEMO
+					<Box display='flex' alignItems='center' gap={1} width="220px">
+						{!hidePlayIcon && <PlayIcon />}
+						{buttonText}
 					</Box>
 				</Button>
 			</Box>
@@ -52,7 +56,7 @@ export const CommonWebBox: React.FC<Props> = ({
 				<span className='description-text'>{descriptionText}</span>
 			</Box>
 
-			<PlayDemoBox image={demoBackgroundImage} url={demoLink} />
+			<PlayDemoBox image={demoBackgroundImage} url={demoLink} buttonText={buttonText} hidePlayIcon={hidePlayIcon} />
 			<div
 				style={{
 					display: 'flex',

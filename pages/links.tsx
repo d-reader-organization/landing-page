@@ -17,6 +17,7 @@ import { SocialIconBox } from 'components/SocialIconBox'
 import { Footer } from 'components/layout/Footer'
 import { TensorBox } from 'components/TensorBox'
 import { DISCORD_LINK, GITHUB_LINK, HOME_LINK, INSTAGRAM_LINK, TENSOR_LINK, TWITTER_LINK } from 'constants/links'
+import { SuperteamEarnBox } from 'components/SuperteamEarnBox'
 
 const Links: NextPage = () => {
 	return (
@@ -33,6 +34,7 @@ const Links: NextPage = () => {
 						<AppleStoreBox />
 					</Box>
 					<DReaderWebBox />
+					<SuperteamEarnBox />
 					<DPublisherBox />
 					<TensorBox />
 					<Box display='flex' flexDirection='column' alignItems='center' gap={3} mt={4}>
